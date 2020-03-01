@@ -7,14 +7,27 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="shortcut icon" href="img/Sin título-1.png">
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+
+
     <style>
+
 
         @font-face{
             font-family: Oswald;
             src: url(fonts/Oswald);
         }
+
+        .prices h3{
+            color: f5ba4b;
+        }
+
 
         #backgroundFirst{           
             background-image: url(img/backgroundLanding.png);
@@ -22,18 +35,16 @@
             width: 100%;
             height: 100vh;
             background-size:cover; /* Cubre el espacio disponible sin distorsionar la imagen*/
-            background-position: center center;           
+            background-position: center center;    
+            transition: all .5s ease-in-out;       
         }
 
         #backText{
             color: #ffffff;
-            width: 350px;
-            height: 50px;
             margin-top: auto;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 150px 50px 30px 100px;
+            padding: 300px 50px 30px 70px;
             transition: all .5s ease-in-out;
+            text-align: center;
         }
 
         h1{
@@ -57,103 +68,428 @@
             margin-bottom: 75px;
         }
 
+        #img, #imgs{
+            display:block;
+
+            
+        }
+
+        .quoted{
+            font-size: medium;
+        }
+
+        .btn-outline-primary{
+            border-color: black;
+            color: black;
+        }
+
     </style>
 
 </head>
 
 
 <body style="background-color:white;margin:0px">
-    
+
+<!-- Text and Navbar -->   
 <div style="background-color: rgba(0, 0, 0, 1)" id="backgroundFirst">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-xl navbar-togglable fixed-top navbar-light" style="background-color: white;">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/Logo - copia.png" width="125" height="40" alt="">
+        </a>
+        <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            <svg class="navbar-brand-svg" viewBox="0 0 245 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M0 0 L 20 10 L 0 20 Z" class="navbar-brand-svg-i" fill="currentColor"></path>
+                <path d="M0 30 L 20 40 L 0 50 Z M20 45 L 0 55 L 20 65 Z M0 60 L 20 70 L 0 80 Z" fill="currentColor"></path>
+            <text x="40" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" letter-spacing="-.025em" fill="currentColor">incline.</text>
+            </svg>
+        </a>
+    
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+    
         
-        <a class="navbar-brand" href="index.html">
-            <img src="img/Logo - copia.png" width="150" height="40" alt="">
-        </a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
 
         
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-
-            <a clas="navbar-brand" href="#" style="margin: auto;">
-            
-            </a>
-
-            <a class="navbar-brand" href="#"></a>
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Empresas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Iniciar Sesión</a>
-                </li>
+            <!-- Links -->
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Registrate
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Empresa</a>
-                    <a class="dropdown-item" href="#">Usuario</a>
-                    </div>
+                <a class="nav-link" href="index.html" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Inicio
+                </a>
+                
                 </li>
+                
 
+
+                    <li class="nav-item ">
+                        <a href="documentation.html" class="nav-link">
+                        ¿Quiénes somos?
+                        </a>
+                    </li>
+                    <li class="nav-item-divider">
+                        <span class="nav-link">
+                        <span></span>
+                        </span>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" target="_blank" class="nav-link">
+                        Explorar
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" target="_blank" class="nav-link">
+                        Ingresar
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarComponents" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Registrarse
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarComponents">
+                    <a class="dropdown-item " href="registeruser.html" style="text-align: center;">
+                    Usuario
+                    </a>
+                    <a class="dropdown-item " href="registerbusiness.html"style="text-align: center;">
+                    Empresa
+                    </a>
+                </div>
+                </li>
             </ul>
-        </div>
+
+            </div> <!-- / .navbar-collapse -->
+    
+        </div> <!-- / .container -->    
+
+        
     </nav>
 
 
     <div style="padding: 75px 0 75 0;"></div>
     <div>
         <section id="backText">
-            <h1>WKOTING</h1>
+            <div class="col-md-12" >
+                <h1 class="m-b-20" style="font-size: xx-large;"><strong>Tu sitio, tu estilo.</strong></h1>
+                <p class="m-b-40" style="font-size: x-large;">Aprovechá los descuentos y rebajas que nadie más te ofrecerá.</p>
+                <p><a class="btn btn-light" href="#">Unete a nosotros</a></p>
+            </div>
         </section>
     </div>
 
 
 </div>
 
-<div id="secondText">
-    
-    <h1 style="color: black;">SOMOS UNA PÁGINA CEO PARA EMPRESAS Y CONSUMIDORES</h1>
-    <p ALIGN="center" style="padding-left: 25px; padding-right: 300px;">Vea cómo sus usuarios experimentan su sitio web en tiempo real o vea tendencias para ver cualquier cambio en el rendimiento a lo largo del tiempo. </p>
-</div>
+<!--Promotion & quoted info -->
+<div class="wow fadeInUp">
+<section class="secondText" style="padding-bottom: 75px;" >
 
-<div>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-8 col-lg-6">
 
-<div id="bodies">
+            <h2 class="mb-4" style="padding-top: 75px; font-family: Oswald;">
+                Con nuestros servicios <span class="text-primary">tendrás todo al alcance de tu mano.</span> 
+            </h2>
+
+        </div>
+    </div> 
     <div class="row">
-        <div class="col-6" style="background-color: #C2AE74;"  height: 300px;>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur optio similique, eius quaerat voluptates sint laudantium odio quam tempora sequi nihil, veniam ducimus cum. Dolorum iure possimus ex qui distinctio.
-            Excepturi animi odio ipsum impedit ex? Sunt commodi voluptas tenetur cum animi molestias accusantium consequatur, explicabo libero voluptatum nostrum aut unde maxime mollitia repudiandae esse nesciunt corrupti beatae magni sed.
-            Mollitia, itaque! Sequi exercitationem minus quam obcaecati similique corporis quis officiis quo? Saepe, facere optio quidem ipsum voluptate dolore, provident libero dolores voluptatum temporibus iusto adipisci quibusdam illum porro. Eius!
-            Quasi explicabo totam dicta obcaecati deserunt id nemo error odio illum! Culpa, aperiam velit. Labore sed eveniet vero accusantium cupiditate omnis, voluptate iste suscipit a quis officia, corrupti, unde ipsum!
-            Aut at aspernatur placeat possimus similique eius dolores. Consectetur quod iste nisi cumque cum voluptatibus pariatur sunt deleniti magnam, voluptate harum molestiae illum expedita aliquam nesciunt labore maiores minima provident!</p>
-        
-        </div>
-        
-        <div class="col-6" style="background-color: #8196C8;"  height: 300px;>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur repellendus voluptatibus voluptatem explicabo harum natus repellat, rem inventore adipisci culpa praesentium eius voluptate, quae, quisquam cum ut laboriosam impedit saepe!
-            Nesciunt accusamus itaque quos ea dolores distinctio, saepe, iste laborum nisi in sit. Quas praesentium iure sit magni asperiores quam modi doloremque temporibus! Porro, dolorem? Alias laudantium consectetur aliquam labore.
-            Quaerat voluptas, porro consequatur tempora mollitia pariatur? Modi itaque alias aspernatur aliquam quibusdam similique numquam distinctio officia aut? Tenetur asperiores vitae, quam reiciendis maiores quaerat ea quasi incidunt voluptatum assumenda!
-            Reprehenderit odio, maxime provident deleniti esse labore, illo libero eos rerum at excepturi aliquam accusamus dicta vel enim ad amet nostrum veritatis adipisci consectetur nesciunt. Fuga ipsum dolores aliquid eius.
-            Consectetur ipsum veniam illum quam doloribus velit tempora distinctio pariatur ratione tempore, porro non saepe ut id beatae modi voluptate? Quasi illo dolore minima ipsum modi dolor sunt molestiae quae.</p>
-        </div>
-</div>
-    
+        <div class="col-md-8">
 
+    
+        <p class="text-muted">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem libero adipisci odit, iure quibusdam veniam eius perferendis numquam cumque repudiandae, quisquam veritatis mollitia. Molestiae ipsa porro, id enim deleniti aspernatur? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
+        <p>
+            <a href="contact.html" class="btn btn-outline-dark">
+                Unete a nosotros
+            </a>
+        </p>
+
+        </div>
+        <div class="col-md-4">
+
+        <blockquote class="blockquote">
+            <p class="quoted">
+            ¡No puedo encontrar ninguna otra página web que pueda igualar los precios y el servicio al cliente de WKoting!
+            </p>
+            <footer class="text-muted" style="font-size: small;">
+        <div class="avatar avatar mr-3">
+                <img src="img/usuario.jpg" alt="..." style="height: 30px; width: 40px; border-radius: 50%!important;">
+        </div> John Doe, New York
+            </footer>
+        </blockquote>
+
+        </div>
+        </div>
+    </div> 
+
+    </section> 
+</div>
+
+
+<!-- Services & stuffs-->
+<section  class="wow fadeInUp" class="section" style="padding-bottom: 75px; background-color: #F8F9FA;">
+    <h1 style="text-align: center;">Servicios y Demás</h1>
+    <!-- Content -->
+    <div class="container">
+    <div class="row no-gutters align-items-stretch">
+        <div class="col-md-4">
+        
+        <!-- Card -->
+        <div class="card card-tall border-0 mb-3 md-md-0">
+            
+
+            <!-- Overlay -->
+            <div class="bg-overlay"></div>
+
+            <!-- Body -->
+            <div class="card-body">
+
+            <!-- Icon -->
+            <div class="card-icon text-primary">
+                <span class="icon icon-businessman"></span>
+            </div>
+            
+            <!-- Title -->
+            <img src="img/21.jpg" alt="" height="300px" width="400px" style="background-color: rgba(0, 0, 0, 0.68);">
+            <h4 class="card-title text-white">
+                Comunicate con empresas
+            </h4>
+
+            <!-- Text -->
+                <p class="card-text text-white text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit a amet dicta eum quae reiciendis.
+                </p>
+
+            </div>
+
+            </div> <!-- / .card -->
+
+        </div>
+        <div class="col-md-4">
+        
+            <!-- Card -->
+            <div class="card card-tall card-standout shadow border-0 mb-3 md-md-0">
+            
+
+            <!-- Overlay -->
+            <div class="bg-overlay"></div>
+
+            <!-- Body -->
+            <div class="card-body">
+
+            <!-- Icon -->
+            <div class="card-icon text-primary">
+                <span class="icon icon-case"></span>
+            </div>
+            
+            <!-- Title -->
+            <img src="img/23.jpg" alt="" height="300px" width="400px">
+            <h4 class="card-title text-white">
+                Explora productos
+            </h4>
+
+            <!-- Text -->
+            <p class="card-text text-white text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit a amet dicta eum quae reiciendis.
+            </p>
+
+            </div>
+
+        </div> <!-- / .card -->
+
+        </div>
+        <div class="col-md-4">
+        
+        <!-- Card -->
+            <div class="card card-tall border-0 mb-3 md-md-0">
+            
+            <!-- Image -->
+            <div class="bg-cover" style="background-image: url(img/22.jpg)"></div>
+
+            <!-- Overlay -->
+            <div class="bg-overlay"></div>
+
+            <!-- Body -->
+            <div class="card-body">
+
+            <!-- Icon -->
+            <div class="card-icon text-primary">
+                <span class="icon icon-truck"></span>
+            </div>
+            
+            <!-- Title -->
+            <img src="img/22.jpg" alt="" height="300px" width="400px">
+            <h4 class="card-title text-white">
+                Servicio de Entregas
+            </h4>
+
+            <!-- Text -->
+            <p class="card-text text-white text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit a amet dicta eum quae reiciendis.
+            </p>
+
+            </div>
+
+        </div> <!-- / .card -->
+
+        </div>
+    </div> <!-- / .row -->
+    </div> <!-- / .container -->
+
+</section>
+
+<!-- Formas de pago de empresa-->
+<div id="prices" class="wow fadeInUp" class="container" style="padding-bottom: 75px; ">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+
+
+        <h2 class="text-center mb-4">
+            Planes de Pago
+        </h2>
+
+    
+        <p class="text-center text-muted mb-5">
+            ¿Sos una empresa y querés publicar tus productos en promoción? No perdás la oportunidad de unirte a nosotros!
+        </p>
+        
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col-lg-4">
+        
+        <!-- Card -->
+        <div class="card card-lg bg-white mb-3 mb-lg-0">
+
+        <div class="card-body text-center">
+
+            <!-- Title -->
+            <h4 class="card-title">
+            Platino
+            </h4>
+
+            <!-- Price -->
+            <h3 class="card-title font-weight-normal text-primary">
+            $49.99
+            </h3>
+
+            <!-- Text -->
+            <ul class="card-text list-iconed">
+                <li class="list-iconed-item">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                </li>
+                <li class="list-iconed-item">
+                    Aliquam quis perferendis, quas fugiat. Iste quisquam sit
+                </li>
+                <li class="list-iconed-item">
+                    Cum ab error sit totam nemo
+                </li>
+            </ul>
+
+            <!-- Button -->
+            <a href="#!" class="btn btn-outline-dark">
+                Obtener
+            </a>
+
+            </div>
+        
+        </div> <!-- / .card -->
+
+        </div>
+            <div class="col-lg-4">
+        
+        <!-- Card -->
+        <div class="card card-lg bg-white card-active mb-3 mb-lg-0">
+        
+            <!-- Body -->
+        <div class="card-body text-center">
+
+            <!-- Title -->
+            <h4 class="card-title">
+            Premium
+            </h4>
+
+            <!-- Price -->
+            <h3 class="card-title font-weight-normal text-primary">
+                $79.99
+            </h3>
+
+            <!-- Text -->
+            <ul class="card-text list-iconed">
+                <li class="list-iconed-item">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                </li>
+                <li class="list-iconed-item">
+                    Aliquam quis perferendis, quas fugiat. Iste quisquam sit
+                </li>
+                <li class="list-iconed-item">
+                    Cum ab error sit totam nemo
+                </li>
+            </ul>
+
+            <!-- Button -->
+            <a href="#!" class="btn btn-outline-dark">
+                Obtener
+            </a>
+
+            </div>
+        
+        </div> <!-- / .card -->
+
+        </div>
+            <div class="col-lg-4">
+        
+        <!-- Card -->
+        <div class="card card-lg bg-white">
+        
+            <!-- Body -->
+            <div class="card-body text-center">
+
+            <!-- Title -->
+            <h4 class="card-title">
+                Diamante
+            </h4>
+
+            <!-- Price -->
+            <h3 class="card-title font-weight-normal text-primary">
+                $99.99
+            </h3>
+
+            <!-- Text -->
+            <ul class="card-text list-iconed">
+                <li class="list-iconed-item">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                </li>
+                <li class="list-iconed-item">
+                Aliquam quis perferendis, quas fugiat. Iste quisquam sit
+                </li>
+                <li class="list-iconed-item">
+                Cum ab error sit totam nemo
+                </li>
+            </ul>
+
+            <!-- Button -->
+            <a href="#!" class="btn btn-outline-dark">
+                Obtener
+            </a>
+
+            </div>
+        
+        </div> <!-- / .card -->
+
+        </div>
+    </div> <!-- / .row -->
 </div>
 
 </div>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="js/bootstrap.min.js"></script>
+        
 </body>
 </html>
