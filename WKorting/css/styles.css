@@ -1,3 +1,79 @@
-body{
-    background-color: black;
+@font-face{
+    font-family: Oswald;
+    src: url(fonts/Oswald);
+}
+
+.prices h3{
+    color: f5ba4b;
+}
+
+
+#backgroundFirst{           
+    background-image: url(../img/backgroundLanding.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size:cover; /* Cubre el espacio disponible sin distorsionar la imagen*/
+    background-position: center center;    
+    transition: all .5s ease-in-out;       
+}
+
+#backText{
+    color: #ffffff;
+    margin-top: auto;
+    padding: 200px 50px 30px 70px;
+    transition: all .5s ease-in-out;
+    text-align: center;
+}
+
+h1{
+    font-family: Oswald ;
+    font-size: 200%;
+    font-weight: normal;
+
+
+}
+
+#secondText{
+
+    margin-top: 75px;
+    padding-left: 350px;
+    margin-bottom: 75px;
+
+}
+
+#bodies{
+    color: white;
+    margin-bottom: 75px;
+}
+
+#img, #imgs{
+    display:block;
+
+    
+}
+
+.quoted{
+    font-size: medium;
+}
+
+.btn-outline-primary{
+    border-color: black;
+    color: black;
+}
+
+h5{
+    font-family: Oswald;
+    padding-left: 45%;
+    font-size: xx-large;
+}
+
+#pheader{
+    padding-left: 40%;
+    padding-top: 10px;
+}
+
+#borderImage{
+    width: auto;
+    height: 300px;
 }

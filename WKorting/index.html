@@ -6,7 +6,7 @@
     <title>WKoting</title>
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="shortcut icon" href="img/Sin título-1.png">
     <script src="js/wow.min.js"></script>
@@ -15,82 +15,10 @@
     </script>
 
 
-
-    <style>
-
-
-        @font-face{
-            font-family: Oswald;
-            src: url(fonts/Oswald);
-        }
-
-        .prices h3{
-            color: f5ba4b;
-        }
-
-
-        #backgroundFirst{           
-            background-image: url(img/backgroundLanding.png);
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 100vh;
-            background-size:cover; /* Cubre el espacio disponible sin distorsionar la imagen*/
-            background-position: center center;    
-            transition: all .5s ease-in-out;       
-        }
-
-        #backText{
-            color: #ffffff;
-            margin-top: auto;
-            padding: 200px 50px 30px 70px;
-            transition: all .5s ease-in-out;
-            text-align: center;
-        }
-
-        h1{
-            font-family: Oswald ;
-            font-size: 200%;
-            font-weight: normal;
-
-
-        }
-
-        #secondText{
-
-            margin-top: 75px;
-            padding-left: 350px;
-            margin-bottom: 75px;
-
-        }
-
-        #bodies{
-            color: white;
-            margin-bottom: 75px;
-        }
-
-        #img, #imgs{
-            display:block;
-
-            
-        }
-
-        .quoted{
-            font-size: medium;
-        }
-
-        .btn-outline-primary{
-            border-color: black;
-            color: black;
-        }
-
-    </style>
-
-</head>
+    </head>
 
 
 <body style="background-color:white;margin:0px">
-
-
 <!-- Text and Navbar -->   
 <div style="background-color: rgba(0, 0, 0, 1)" id="backgroundFirst">
     <nav class="navbar navbar-expand-xl navbar-togglable fixed-top navbar-light" style="background-color: white;">
@@ -135,17 +63,23 @@
                         Explorar
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="login.html" target="_blank" class="nav-link">
-                        Ingresar
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarComponents" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Ingresar
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="login.html" target="_blank" class="nav-link">
-                        Registrarse
-                        </a>
-                    </li>
-                
+                        <div class="dropdown-menu" aria-labelledby="navbarComponents">
+                            <a type="button" data-toggle="modal" data-target="#signUpModal" class="nav-link" style="text-align: center;">
+                                Usuario
+                            </a>
+                            <a style="text-align: center;" type="button" data-toggle="modal" data-target="#signInModal" class="nav-link">
+                                Empresa
+                            </a>
+                        </div>
+                        </li>
+
+
+                    
                 
             </ul>
 
@@ -157,7 +91,7 @@
     </nav>
 
 
-    <div style=""></div>
+    <div></div>
     <div>
         <section id="backText">
             <div class="row justify-content-lg-between align-items-lg-center">
@@ -168,9 +102,7 @@
                     <!-- End Title -->
                 </div>
                 
-                <div class="col-lg-5" style="padding-left: 100px;">
-                    
-                </div>
+        
             </div>
         </section>
     </div>
@@ -484,6 +416,174 @@
         </div>
     </div> <!-- / .row -->
 </div>
+
+<!-- Modals For Users-->
+    <!-- Modal -->
+    <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+                <div class="card">
+
+                    <!-- Close -->
+                    <button type="button" class="modal-close close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                    </button>
+        
+                    <!-- Image -->
+                    
+        
+                    <!-- Shape -->
+                    <div class="position-relative">
+                    
+                    </div>
+        
+                    <!-- Body -->
+                    <div class="card-body">
+        
+                    <!-- Heading -->
+                    <h2 class="mb-0 font-weight-bold text-center" id="modalSigninVerticalTitle">
+                        Registrate
+                    </h2>
+        
+                    <!-- Text -->
+                    <p class="mb-6 text-center text-muted">
+                        Comienza tu camino en el mundo de ofertas.
+                    </p>
+        
+                    <!-- Form -->
+                    <form class="mb-6">
+        
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label class="sr-only" for="modalSigninVerticalEmail">
+                                Email
+                            </label>
+                            <input type="email" class="form-control" id="modalSigninVerticalEmail" placeholder="Nombres">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="sr-only" for="modalSigninVerticalEmail">
+                                    Email
+                                </label>
+                                <input type="email" class="form-control" id="modalSigninVerticalEmail" placeholder="Tu Email">
+                                </div>
+
+                        <div class="form-group">
+                        <label class="sr-only" for="modalSigninVerticalEmail">
+                            Email
+                        </label>
+                        <input type="email" class="form-control" id="modalSigninVerticalEmail" placeholder="Tu Email">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="sr-only" for="modalSigninVerticalEmail">
+                                Email
+                            </label>
+                            <input type="email" class="form-control" id="modalSigninVerticalEmail" placeholder="Contraseña">
+                            </div>
+        
+                        <!-- Password -->
+                        <div class="form-group mb-5">
+                        <label class="sr-only" for="modalSigninVerticalPassword">
+                            Contraseña
+                        </label>
+                        <input type="password" class="form-control" id="modalSigninVerticalPassword" placeholder="Confirmar contraseña">
+                        </div>
+
+                        
+        
+                        <!-- Submit -->
+                        <a class="btn btn-block btn-outline-dark" type="submit" href="dashoboard.html">
+                        Registrarse
+                        </a>
+        
+                    </form>
+        
+                    <!-- Text -->
+                    <div class="modal-footer">
+                        <label>¿Ya tienes cuenta?</label>
+                        <a type="button"  data-toggle="modal" href="#signUpModal" data-dismiss="modal">Iniciar Sesion</a>
+                    </div>
+
+                    </div>
+        
+                </div>
+        </div>
+        </div>
+    </div>
+
+    
+    <!-- Modal 2 -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-content">
+                <div class="card">
+
+                    <!-- Close -->
+                    <button type="button" class="modal-close close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                    </button>
+        
+                    <!-- Image -->
+                
+        
+                    <!-- Shape -->
+                    <div class="position-relative">
+                    
+                    </div>
+        
+                    <!-- Body -->
+                    <div class="card-body">
+        
+                    <!-- Heading -->
+                    <h2 class="mb-0 font-weight-bold text-center" id="modalSigninVerticalTitle">
+                        Iniciar Sesión
+                    </h2>
+        
+                    <!-- Text -->
+                    <p class="mb-6 text-center text-muted">
+                        Comienza tu camino en el mundo de ofertas.
+                    </p>
+        
+                    <!-- Form -->
+                    <form class="mb-6">
+        
+                        <!-- Email -->
+                        <div class="form-group">
+                        <label class="sr-only" for="modalSigninVerticalEmail">
+                            Ingresa tu email
+                        </label>
+                        <input type="email" class="form-control" id="modalSigninVerticalEmail" placeholder="Ingresa tu Email">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="sr-only" for="modalSigninVerticalEmail">
+                                Password
+                            </label>
+                            <input type="password" class="form-control" id="modalSigninVerticalEmail" placeholder="Ingresa tu Contraseña">
+                            </div>
+        
+        
+                        <!-- Submit -->
+                        <a class="btn btn-block btn-outline-dark" type="submit" href="dashoboard.html">
+                        Iniciar Sesión
+                        </a>
+        
+                    </form>
+        
+                    <!-- Text -->
+                    <div class="modal-footer">
+                        <label>¿No tienes cuenta?</label>
+                        <a type="button"  data-toggle="modal" href="#signInModal" data-dismiss="modal">Registrate</a>
+                    </div>
+
+                    </div>
+        
+                </div>
+        </div>
+        </div>
+    </div>
 
 
 
