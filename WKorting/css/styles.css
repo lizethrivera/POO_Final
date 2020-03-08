@@ -8,6 +8,17 @@
 }
 
 
+#backgroundE{           
+    background-image: url(../img/Enterprise.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 65vh;
+    background-size:cover; /* Cubre el espacio disponible sin distorsionar la imagen*/
+    background-position: center center;    
+    transition: all .5s ease-in-out;  
+    padding-bottom: 75px;     
+}
+
 #backgroundFirst{           
     background-image: url(../img/backgroundLanding.png);
     background-repeat: no-repeat;
@@ -26,6 +37,16 @@
     text-align: center;
 }
 
+#profileE{
+    color: #ffffff;
+    margin-top: auto;
+    padding: 200px 60px 50px 100px;
+    transition: all .5s ease-in-out;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+}
+
 h1{
     font-family: Oswald ;
     font-size: 200%;
@@ -34,6 +55,15 @@ h1{
 
 }
 
+#eBody{
+    margin-top: 150px;
+}
+
+.searchNav{
+
+    width: 10px !important;
+    height: 10px !important;
+}
 #secondText{
 
     margin-top: 75px;
@@ -77,3 +107,5 @@ h5{
     width: auto;
     height: 300px;
 }
+
+

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="shortcut icon" href="img/Sin título-1.png">
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+</head>
+
+
+
+
+
+<body style="background-color:white;margin:0px">
+    <!-- Text and Navbar -->  
+    <div style="background-color: rgba(0, 0, 0, 1)" id="backgroundE">
+        <nav class="navbar navbar-expand-xl navbar-togglable fixed-top navbar-light" style="background-color: white;">
+            <a class="navbar-brand" href="inWeb.html">
+                <img src="img/Logo - copia.png" width="125" height="40" alt="">
+            </a>
+            <div class="container">
+    
+            <a class="navbar-brand" href="index.html">
+                <svg class="navbar-brand-svg" viewBox="0 0 245 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path d="M0 0 L 20 10 L 0 20 Z" class="navbar-brand-svg-i" fill="currentColor"></path>
+                    <path d="M0 30 L 20 40 L 0 50 Z M20 45 L 0 55 L 20 65 Z M0 60 L 20 70 L 0 80 Z" fill="currentColor"></path>
+                <text x="40" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" letter-spacing="-.025em" fill="currentColor">incline.</text>
+                </svg>
+            </a>
+            
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+    
+            
+                <!-- Links -->
+                <ul class="navbar-nav ml-auto">
+                        
+                        <li class="nav-item-dividers"></li>
+                    <li class="nav-item-dividers">
+                        <a href="inWeb.html" class="nav-link">
+                        Inicio
+                        </a>
+                    </li>  
+                            <a href="#whoWeAre" class="nav-link">
+                            ¿Quiénes somos?
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a style="text-align: center;" type="button" data-toggle="modal" data-target="#modalSearch"class="nav-link">
+                                Explorar
+                            </a>
+                        </li>
+    
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarComponents" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                IPAgency
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarComponents">
+                                <a type="button" href="enterprise.html" class="nav-link" style="text-align: center;">
+                                    Perfil
+                                </a>
+                                <a style="text-align: center;" type="button" data-toggle="modal" data-target="#editProfileE" class="nav-link">
+                                    Editar perfil
+                                </a>
+                                <a style="text-align: center;" type="button" data-toggle="modal" data-target="#addProduct" class="nav-link">
+                                    Agregar productos
+                                </a>
+                                <a style="text-align: center;" type="button" data-toggle="modal" data-target="#stadistics" class="nav-link">
+                                    Estádisticas
+                                </a>
+                                <a type="button" href="index.html" class="nav-link" style="text-align: center;">
+                                    Cerrar Sesión
+                                </a>
+
+                            
+                            </div>
+                            </li>
+    
+    
+                        
+                    
+                </ul>
+            
+        </nav>
+
+        <div>
+            <img src="img/perfil.png" alt="" style="margin-left: 50px; height: 150px; margin-top: 350px; background-color: whitesmoke;">
+        </div>
+
+    </div>
+
+    <div id="eBody">
+        <div class="row">
+            <div class="col-3">
+                <a class="btn btn-block btn-outline-dark" type="button"  data-toggle="modal" href="#editProfileE" data-dismiss="modal">Editar Perfil</a> <br>
+                <a class="btn btn-block btn-outline-dark" type="button"  data-toggle="modal" href="#addProduct" data-dismiss="modal">Agregar Producto</a> <br><br>  
+            </div>
+
+    
+            <div class="col-8">
+                        
+                    <div class="card col-4" style="width: 18rem; padding-right: 10px;">
+                        <img src="img/product1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Botes de Agua</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            
+                        </div>
+                        </div>
+                    
+                
+            </div>
+        </div>
+
+    
+    </div>
+    
+
+<!--Modal for Stadistics-->
+<div class="modal fade" id="stadistics" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+            <div class="card">
+
+                <!-- Close -->
+                <button type="button" class="modal-close close text-white" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+                </button>
+    
+                <!-- Image -->
+                
+    
+                <!-- Shape -->
+                <div class="position-relative">
+                
+                </div>
+    
+                <!-- Body -->
+                <div class="card-body">
+    
+                <!-- Heading -->
+                <h2 class="mb-0 font-weight-bold text-center" id="modalSigninVerticalTitle">
+                    Estádisticas
+                </h2>
+    
+                <!-- Text -->
+                <p class="mb-6 text-center text-muted">
+                    Tu Web, Tu Estilo.
+                </p>
+    
+                <!-- Form -->
+                    <img src="img/orders.png" alt="" srcset="" style="width: 450px;">
+
+                    <img src="img/ventas.png" alt="" srcset="" style="width: 450px;">
+                
+                </div>
+    
+            </div>
+    </div>
+    </div>
+</div>
+    
+<!--Modal for Profile Edit-->
+<div class="modal fade" id="editProfileE" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="mb-0 font-weight-bold text-center" id="modalSigninVerticalTitle">
+                Editar Perfil
+            </h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-row">
+                    
+                    <div class="form-group">
+                    <label for="inputAddress">Dirección</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+
+                    <div class="form-group">
+                    <label for="inputAddress2">Dirección 2</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                    </div>^
+
+                    <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">Ciudad</label>
+                        <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">Estado</label>
+                        <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <label for="inputZip">Zip</label>
+                        <input type="text" class="form-control" id="inputZip">
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputAddress">Banner</label>
+                        <input type="file" class="form-control" id="inputAddress" placeholder="Selecciona una foto para tu banner" style="padding-bottom: 5px;">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputAddress">Foto de Perfil</label>
+                            <input type="file" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            </div>
+
+                        <br>
+                        
+                    <!-- Submit -->
+                    <a class="btn btn-block btn-outline-dark" type="submit" href="enterprise.html">
+                        Guardar
+                        </a>
+
+
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="addProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="mb-0 font-weight-bold text-center" id="modalSigninVerticalTitle">
+                Agregar Productos
+            </h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-row">
+                    
+                    <div class="form-group">
+                        <label for="">Nombre</label>
+                        <input type="text" name="">
+                    </div>
+
+                    <div class="form-group">
+                    <label for="">Imagen</label>
+                    <input type="image" src="" alt="">
+                    </div>
+
+
+                    <div class="form-row">
+                    <label for="">Precio</label>
+                    <input type="number" name="" id="">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="">Información sobre producto</label>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    
+                    
+                        <br>
+                        
+                    <!-- Submit -->
+                    <a class="btn btn-block btn-outline-dark" type="submit" href="enterprise.html">
+                        Guardar
+                        </a>
+            </form>
+
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+    
+</body>
+</html>

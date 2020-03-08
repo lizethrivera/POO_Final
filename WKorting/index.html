@@ -34,7 +34,7 @@
             <text x="40" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" letter-spacing="-.025em" fill="currentColor">incline.</text>
             </svg>
         </a>
-    
+        
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -46,21 +46,25 @@
         
             <!-- Links -->
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-                <a class="nav-link" href="index.html" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Inicio
-                </a>
-                
-                </li>
+
+                <li class="nav-item-dividers"></li>
                 <li class="nav-item-dividers">
-                        <a href="documentation.html" class="nav-link">
+                    <a href="index.html" class="nav-link">
+                    Inicio
+                    </a>
+                </li>    
+                
+                
+            
+                
+                        <a href="#whoWeAre" class="nav-link">
                         ¿Quiénes somos?
                         </a>
                     </li>
                     
                     <li class="nav-item">
-                        <a href="#" target="_blank" class="nav-link">
-                        Explorar
+                        <a style="text-align: center;" type="button" data-toggle="modal" data-target="#modalSearch"class="nav-link">
+                            Explorar
                         </a>
                     </li>
 
@@ -72,7 +76,7 @@
                             <a type="button" data-toggle="modal" data-target="#signUpModal" class="nav-link" style="text-align: center;">
                                 Usuario
                             </a>
-                            <a style="text-align: center;" type="button" data-toggle="modal" data-target="#ModalEmpresaRegistrarse" class="nav-link">
+                            <a style="text-align: center;" type="button" data-toggle="modal" data-target="#signUpModalE" class="nav-link">
                                 Empresa
                             </a>
                         </div>
@@ -117,7 +121,7 @@
 <section class="secondText" style="padding-bottom: 75px;" >
 
     
-    <div class="container">
+    <div class="container" id="whoWeAre">
         <div class="row">
         <div class="col-md-8 col-lg-6">
 
@@ -570,6 +574,8 @@
                         <a class="btn btn-block btn-outline-dark" type="submit" href="dashoboard.html">
                         Iniciar Sesión
                         </a>
+
+                        
         
                     </form>
         
@@ -586,116 +592,243 @@
         </div>
     </div>
 </div>
-<!-- Modals For Enterprise-->
-        <!-- Modal -->
-        <div class="modal fade" id="ModalEmpresaRegistrarse" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="card">
 
-                    <!-- Close -->
-                    <button type="button" class="modal-close close text-white" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
+
+<!--Modal for Products-->
+
+    <div class="modal fixed-right fade" id="modalSearch" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-dialog-vertical" role="document">
+        <div class="modal-content">
+
+            <!-- Close -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i class="fe fe-x" aria-hidden="true"></i>
+            </button>
+
+            <!-- Header-->
+            <div class="modal-header line-height-fixed font-size-lg">
+            <strong class="mx-auto">Search Products</strong>
+            </div>
+
+            <!-- Body: Form -->
+            <div class="modal-body">
+            <form>
+                <div class="form-group">
+                <label class="sr-only" for="modalSearchCategories">Categorias:</label>
+                <select class="custom-select" id="modalSearchCategories">
+                    <option selected="">Todas las Categorias</option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+                </div>
+                <div class="input-group input-group-merge">
+                <input class="form-control" type="search" placeholder="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-border" type="submit">
+                    <i class="fe fe-search"></i>
                     </button>
-        
-                    <!-- Image -->
-                    
-        
-                    <!-- Shape -->
-                    <div class="position-relative">
-                    
-                    </div>
-        
-                    <!-- Body -->
-                    <div class="card-body">
-        
-                    <!-- Heading -->
-                    <h2 class="mb-0 font-weight-bold text-center" id="modalSigninVerticalTitle">
-                        Registrate
-                    </h2>
-        
-                    <!-- Text -->
-                    <p class="mb-6 text-center text-muted">
-                        Comienza tu camino en el mundo de ofertas.
-                    </p>
-        
-                    <!-- Form -->
-                    <form class="mb-6">
-        
-                        <!-- Email -->
-                        <div class="form-group">
-                            <label class="sr-only" for="modalSigninVerticalEmail">
-                                Email
-                            </label>
-                            <input type="email" class="form-control" id="modalSigninVerticalEmail" placeholder="Nombre de la Empresa">
-                            </div>
+                </div>
+                </div>
+            </form>
+            </div>
 
-                            <div class="form-group">
-                                <label class="sr-only" for="modalSigninVerticalEmail">
-                                    Email
-                                </label>
-                                <input type="email" class="form-control" id="modalSigninVerticalEmail" placeholder="País">
-                                </div>
+            <!-- Body: Results (add `.d-none` to disable it) -->
+            <div class="modal-body border-top font-size-sm">
 
+            <!-- Heading -->
+            <p>Search Results:</p>
 
-                        <div class="form-group">
-                        <label class="sr-only" for="modalSigninVerticalEmail">
-                            Email
-                        </label>
-                        <input type="email" class="form-control" id="modalSigninVerticalEmail" placeholder="Dirección">
-                        </div>
+            <!-- Items -->
+            <div class="row align-items-center position-relative mb-5">
+                <div class="col-4 col-md-3">
 
-                        <div class="form-group">
-                            <label class="sr-only" for="modalSigninVerticalEmail">
-                                Email
-                            </label>
-                            <input type="file" class="form-control" id="modalSigninVerticalEmail" placeholder="Banner">
-                            </div>
+                <!-- Image -->
+                <img class="img-fluid" src="" alt="...">
 
-                            <div class="form-group">
-                                <label class="sr-only" for="modalSigninVerticalEmail">
-                                    Email
-                                </label>
-                                <input type="file" class="form-control" id="modalSigninVerticalEmail" placeholder="Logotipo">
-                                </div>
+                </div>
+                <div class="col position-static">
 
-                        <div class="form-group">
-                            <label class="sr-only" for="modalSigninVerticalEmail">
-                                Email
-                            </label>
-                            <input type="email" class="form-control" id="modalSigninVerticalEmail" placeholder="Contraseña">
-                            </div>
-        
-                        <!-- Password -->
-                        <div class="form-group mb-5">
-                        <label class="sr-only" for="modalSigninVerticalPassword">
-                            Contraseña
-                        </label>
-                        <input type="password" class="form-control" id="modalSigninVerticalPassword" placeholder="Confirmar contraseña">
-                        </div>
+                <!-- Text -->
+                <p class="mb-0 font-weight-bold">
+                    <a class="stretched-link text-body" href="">Leather mid-heel Sandals</a> <br>
+                    <span class="text-muted">$129.00</span>
+                </p>
 
-                        
-        
-                        <!-- Submit -->
-                        <a class="btn btn-block btn-outline-dark" type="submit" href="dashoboard.html">
-                        Registrarse
-                        </a>
-        
-                    </form>
-        
-                    <!-- Text -->
-                    <div class="modal-footer">
-                        <label>¿Ya tienes cuenta?</label>
-                        <a type="button"  data-toggle="modal" href="#signUpModalE" data-dismiss="modal">Iniciar Sesion</a>
-                    </div>
-
-                    </div>
-        
                 </div>
             </div>
-        </div>
+            <div class="row align-items-center position-relative mb-5">
+                <div class="col-4 col-md-3">
+
+                <!-- Image -->
+                <img class="img-fluid" src="" alt="...">
+
+                </div>
+                <div class="col position-static">
+
+                <!-- Text -->
+                <p class="mb-0 font-weight-bold">
+                    <a class="stretched-link text-body" href="">Cotton floral print Dress</a> <br>
+                    <span class="text-muted">$40.00</span>
+                </p>
+
+                </div>
+            </div>
+            <div class="row align-items-center position-relative mb-5">
+                <div class="col-4 col-md-3">
+
+                <!-- Image -->
+                <img class="img-fluid" src="" alt="...">
+
+                </div>
+                <div class="col position-static">
+
+                <!-- Text -->
+                <p class="mb-0 font-weight-bold">
+                    <a class="stretched-link text-body" href="">Leather Sneakers</a> <br>
+                    <span class="text-primary">$85.00</span>
+                </p>
+
+                </div>
+            </div>
+            <div class="row align-items-center position-relative mb-5">
+                <div class="col-4 col-md-3">
+
+                <!-- Image -->
+                <img class="img-fluid" src="" alt="...">
+
+                </div>
+                <div class="col position-static">
+
+                <!-- Text -->
+                <p class="mb-0 font-weight-bold">
+                    <a class="stretched-link text-body" href="./product.html">Cropped cotton Top</a> <br>
+                    <span class="text-muted">$29.00</span>
+                </p>
+
+                </div>
+            </div>
+            <div class="row align-items-center position-relative mb-5">
+                <div class="col-4 col-md-3">
+
+                <!-- Image -->
+                <img class="img-fluid" src="" alt="...">
+
+                </div>
+                <div class="col position-static">
+
+                <!-- Text -->
+                <p class="mb-0 font-weight-bold">
+                    <a class="stretched-link text-body" href="#">Floral print midi Dress</a> <br>
+                    <span class="text-muted">$50.00</span>
+                </p>
+
+                </div>
+            </div>
+
+            <!-- Button -->
+            <a class="btn btn-link px-0 text-reset" href="./shop.html">
+                Ver todo<i class="fe fe-arrow-right ml-2"></i>
+            </a>
+
         </div>
 
+        <!-- Body: Empty (remove `.d-none` to disable it) -->
+        <div class="d-none modal-body">
+
+            <!-- Text -->
+            <p class="mb-3 font-size-sm text-center">
+                No hay coincidencia con tu busqueda
+            </p>
+
+
+        </div>
+        </div>
+        </div>
+    </div>
+
+<!-- Modals For Enterprise-->
+        <!-- Modal -->
+            <div class="modal fade" id="ModalEmpresaRegistrarse" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="mb-0 font-weight-bold text-center" id="modalSigninVerticalTitle">
+                            Registrate
+                        </h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Contraseña</label>
+                                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                </div>
+                                </div>
+
+                                <div class="form-group">
+                                <label for="inputAddress">Dirección</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                </div>
+
+                                <div class="form-group">
+                                <label for="inputAddress2">Dirección 2</label>
+                                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                </div>^
+
+                                <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputCity">Ciudad</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">Estado</label>
+                                    <select id="inputState" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2">
+                                    <label for="inputZip">Zip</label>
+                                    <input type="text" class="form-control" id="inputZip">
+                                </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inputAddress">Banner</label>
+                                    <input type="file" class="form-control" id="inputAddress" placeholder="Selecciona una foto para tu banner" style="padding-bottom: 5px;">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="inputAddress">Foto de Perfil</label>
+                                        <input type="file" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                        </div>
+
+                                    <br>
+                                    
+                                <!-- Submit -->
+                                <a class="btn btn-block btn-outline-dark" type="submit" href="enterprise.html">
+                                    Registrarse
+                                    </a>
+        
+
+                    </div>
+                    <div class="modal-footer">
+                        <label>¿Ya estás registrado?</label>
+                        <a type="button"  data-toggle="modal" href="#signUpModalE" data-dismiss="modal">Inicia Sesión</a>
+                    </div>
+                </div>
+                </div>
+            </div>
     
     <!-- Modal 2 -->
     <div class="modal fade" id="signUpModalE" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -750,7 +883,7 @@
         
         
                         <!-- Submit -->
-                        <a class="btn btn-block btn-outline-dark" type="submit" href="dashoboard.html">
+                        <a class="btn btn-block btn-outline-dark" type="submit" href="enterprise.html">
                         Iniciar Sesión
                         </a>
         
