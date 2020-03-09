@@ -24,7 +24,7 @@
     <!-- Text and Navbar -->  
     <div style="background-color: rgba(0, 0, 0, 1)" id="backgroundFirst">
         <nav class="navbar navbar-expand-xl navbar-togglable fixed-top navbar-light" style="background-color: white;">
-            <a class="navbar-brand" href="inWeb.html">
+            <a class="navbar-brand" href="inWebU.html">
                 <img src="img/Logo - copia.png" width="125" height="40" alt="">
             </a>
             <div class="container">
@@ -51,7 +51,7 @@
                         
                         <li class="nav-item-dividers"></li>
                     <li class="nav-item-dividers">
-                        <a href="inWeb.html" class="nav-link">
+                        <a href="inWebU.html" class="nav-link">
                         Inicio
                         </a>
                     </li>  
@@ -66,20 +66,17 @@
     
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarComponents" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                SDC Library
+                                Daniel Robinson
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarComponents">
-                                <a type="button" href="enterprise.html" class="nav-link" style="text-align: center;">
+                                <a type="button" href="users.html" class="nav-link" style="text-align: center;">
                                     Perfil
                                 </a>
-                                <a style="text-align: center;" type="button" data-toggle="modal" data-target="#signUpModalE" class="nav-link">
+                                <a style="text-align: center;" type="button" data-toggle="modal" data-target="#editProfileU" class="nav-link">
                                     Editar perfil
                                 </a>
-                                <a style="text-align: center;" type="button" data-toggle="modal" data-target="#signUpModalE" class="nav-link">
-                                    Agregar productos
-                                </a>
-                                <a style="text-align: center;" type="button" data-toggle="modal" data-target="#stadistics" class="nav-link">
-                                    Estádisticas
+                                <a style="text-align: center;" type="button" data-toggle="modal" data-target="#orders" class="nav-link">
+                                    Mis Ordenes
                                 </a>
                                 <a style="text-align: center;" href="index.html" class="nav-link">
                                     Cerrar Sesión
@@ -430,6 +427,165 @@
     </div>
 </div>
 
+
+    <div class="modal fade" id="editProfileU" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="mb-0 font-weight-bold text-center" id="modalSigninVerticalTitle">
+                    Editar Perfil
+                </h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <div class="col-12 col-md-9 col-lg-8 offset-lg-1">
+
+                <!-- Form -->
+                <form>
+                <div class="row">
+                    <div class="col-12">
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="accountFirstName">
+                        Nombre*
+                        </label>
+                        <input class="form-control form-control-sm" id="accountFirstName" type="text" placeholder="First Name *" value="Daniel" required="">
+                    </div>
+
+                    </div>
+                    <div class="col-12">
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="accountLastName">
+                        Apellido*
+                        </label>
+                        <input class="form-control form-control-sm" id="accountLastName" type="text" placeholder="Last Name *" value="Robinson" required="">
+                    </div>
+
+                    </div>
+                    <div class="col-12">
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="accountEmail">
+                        Email*
+                        </label>
+                        <input class="form-control form-control-sm" id="accountEmail" type="email" placeholder="Email Address *" value="user@email.com" required="">
+                    </div>
+
+                    </div>
+                    <div class="col-12">
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="accountPassword">
+                        Contraseña*
+                        </label>
+                        <input class="form-control form-control-sm" id="accountPassword" type="password" placeholder="Current Password *" required="">
+                    </div>
+
+                    </div>
+                    <div class="col-12">
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="AccountNewPassword">
+                        Nueva Contraseña*
+                        </label>
+                        <input class="form-control form-control-sm" id="AccountNewPassword" type="password" placeholder="New Password *" required="">
+                    </div>
+
+                    </div>
+                    <div class="col-12">
+
+                    <!-- Birthday -->
+                    <div class="form-group">
+
+                        <!-- Label -->
+                        <label>Fecha de Nacimiento</label>
+
+                        <!-- Inputs -->
+                        <div class="form-row">
+                        <div class="col-auto">
+
+                            <!-- Date -->
+                            <label class="sr-only" for="accountDate">
+                            Fecha
+                            </label>
+                            <select class="custom-select custom-select-sm" id="accountDate">
+                            <option>10</option>
+                            <option>11</option>
+                            <option selected="">12</option>
+                            </select>
+
+                        </div>
+                        <div class="col">
+
+                            <!-- Date -->
+                            <label class="sr-only" for="accountMonth">
+                            Mes
+                            </label>
+                            <select class="custom-select custom-select-sm" id="accountMonth">
+                            <option>Enero</option>
+                            <option selected="">Febrero</option>
+                            <option>Marzo</option>
+                            </select>
+
+                        </div>
+                        <div class="col-auto">
+
+                            <!-- Date -->
+                            <label class="sr-only" for="accountYear">
+                            Año
+                            </label>
+                            <select class="custom-select custom-select-sm" id="accountYear">
+                            <option>1990</option>
+                            <option selected="">1991</option>
+                            <option>1992</option>
+                            </select>
+
+                        </div>
+                        </div>
+
+                    </div>
+
+                    </div>
+                    <div class="col-12 col-lg-6">
+
+                    <!-- Gender -->
+                    <div class="form-group mb-8">
+                        <label>Genero</label>
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-sm btn-outline-border active">
+                            <input type="radio" name="gender" checked=""> Masculino
+                        </label>
+                        <label class="btn btn-sm btn-outline-border">
+                            <input type="radio" name="gender"> Femenino
+                        </label>
+                        </div>
+                    </div>
+
+                    </div>
+                
+                </div>
+                </form>
+
+            </div>
+                            
+                        <!-- Submit -->
+                        <a class="btn btn-block btn-outline-dark" type="submit" href="enterprise.html">
+                            Guardar
+                            </a>
+
+
+            </div>
+        </div>
+        </div>
+    </div>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="js/bootstrap.min.js"></script>
     

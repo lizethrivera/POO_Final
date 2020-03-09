@@ -9,7 +9,20 @@
 
 
 #backgroundE{           
-    background-image: url(../img/Enterprise.jpg);
+    background-image: url(../img/portada.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 65vh;
+    background-size:cover; /* Cubre el espacio disponible sin distorsionar la imagen*/
+    background-position: center center;    
+    transition: all .5s ease-in-out;  
+    padding-bottom: 75px;     
+}
+
+
+
+#backgroundU{           
+    background-image: url(../img/279.png);
     background-repeat: no-repeat;
     width: 100%;
     height: 65vh;
@@ -56,7 +69,8 @@ h1{
 }
 
 #eBody{
-    margin-top: 150px;
+    margin-top: 75px;
+    background-color: #F8F9FA;
 }
 
 .searchNav{

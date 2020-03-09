@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="shortcut icon" href="img/Sin título-1.png">
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+</head>
+
+
+<body style="background-color:white;margin:0px">
+  <!-- Text and Navbar -->  
+  <div style="background-color: rgba(0, 0, 0, 1)" id="backgroundU">
+      <nav class="navbar navbar-expand-xl navbar-togglable fixed-top navbar-light" style="background-color: white;">
+          <a class="navbar-brand" href="inWeb.html">
+              <img src="img/Logo - copia.png" width="125" height="40" alt="">
+          </a>
+          <div class="container">
+  
+          <a class="navbar-brand" href="index.html">
+              <svg class="navbar-brand-svg" viewBox="0 0 245 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M0 0 L 20 10 L 0 20 Z" class="navbar-brand-svg-i" fill="currentColor"></path>
+                  <path d="M0 30 L 20 40 L 0 50 Z M20 45 L 0 55 L 20 65 Z M0 60 L 20 70 L 0 80 Z" fill="currentColor"></path>
+              <text x="40" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" letter-spacing="-.025em" fill="currentColor">incline.</text>
+              </svg>
+          </a>
+          
+  
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+  
+          
+              <!-- Links -->
+              <ul class="navbar-nav ml-auto">
+                      
+                      <li class="nav-item-dividers"></li>
+                  <li class="nav-item-dividers">
+                      <a href="inWebU.html" class="nav-link">
+                      Inicio
+                      </a>
+                  </li>  
+                          <a href="#whoWeAre" class="nav-link">
+                          ¿Quiénes somos?
+                          </a>
+                      </li>
+                      
+                      <a type="button" data-toggle="modal" data-target="#modalSearch" class="nav-link">
+                          Explorar
+                      </a>
+  
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarComponents" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Daniel Robinson
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarComponents">
+                              <a type="button" href="users.html" class="nav-link" style="text-align: center;">
+                                  Perfil
+                              </a>
+                              <a style="text-align: center;" type="button" data-toggle="modal" data-target="#editProfileU" class="nav-link">
+                                  Editar perfil
+                              </a>
+                              <a style="text-align: center;" type="button" data-toggle="modal" data-target="#Orders" class="nav-link">
+                                  Mis Ordenes
+                              </a>
+                              <a type="button" href="index.html" class="nav-link" style="text-align: center;">
+                                  Cerrar Sesión
+                              </a>
+
+                          
+                          </div>
+                          </li>
+  
+  
+                      
+                  
+              </ul>
+          
+      </nav>
+
+      <div>
+          <img src="img/usuario.jpg" alt="" style="margin-left: 80px; height: 150px; margin-top: 350px; background-color: whitesmoke;">
+      </div>
+
+  </div>
+
+  <div id="orders">
+    <section class="pt-7 pb-12" style="padding-top: 75px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+  
+              <!-- Heading -->
+              <h3 class="mb-10">Mi Cuenta</h3>
+  
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-3">
+  
+              <!-- Nav -->
+              <nav class="mb-10 mb-md-0">
+                <div class="list-group list-group-sm list-group-strong list-group-flush-x">
+                  <a class="list-group-item list-group-item-action dropright-toggle active btn btn-outline-dark" href="">
+                    Ordenes
+                  </a>
+                  <!--<a class="list-group-item list-group-item-action dropright-toggle" href="account-wishlist.html">
+                    Deseados
+                  </a>-->
+                  <a class="list-group-item list-group-item-action dropright-toggle" type="button"  data-toggle="modal" href="#editProfileU" data-dismiss="modal">Información Personal</a>
+                    
+                </div>
+              </nav>
+  
+            </div>
+
+
+
+
+            <div id="Orders" class="col-12 col-md-9 col-lg-8 offset-lg-1">
+  
+              <!-- Order -->
+              <div class="card card-lg mb-5 border">
+                <div class="card-body pb-0">
+  
+                  <!-- Info -->
+                  <div class="card card-sm">
+                    <div class="card-body bg-light">
+                      <div class="row">
+                        <div class="col-6 col-lg-3">
+  
+                          <!-- Heading -->
+                          <h6 class="heading-xxxs text-muted">Orden No:</h6>
+  
+                          <!-- Text -->
+                          <p class="mb-lg-0 font-size-sm font-weight-bold">
+                            673290789
+                          </p>
+  
+                        </div>
+                        <div class="col-6 col-lg-3">
+  
+                          <!-- Heading -->
+                          <h6 class="heading-xxxs text-muted">Fecha de Entrega:</h6>
+  
+                          <!-- Text -->
+                          <p class="mb-lg-0 font-size-sm font-weight-bold">
+                            <time datetime="2019-10-01">
+                              01 Oct, 2019
+                            </time>
+                          </p>
+  
+                        </div>
+                        <div class="col-6 col-lg-3">
+  
+                          <!-- Heading -->
+                          <h6 class="heading-xxxs text-muted">Status:</h6>
+  
+                          <!-- Text -->
+                          <p class="mb-0 font-size-sm font-weight-bold">
+                            Envio Pendiente
+                          </p>
+  
+                        </div>
+                        <div class="col-6 col-lg-3">
+  
+                          <!-- Heading -->
+                          <h6 class="heading-xxxs text-muted">Cantidad:</h6>
+  
+                          <!-- Text -->
+                          <p class="mb-0 font-size-sm font-weight-bold">
+                            $259.00
+                          </p>
+  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                </div>
+                <div class="card-footer">
+                  <div class="row align-items-center">
+                    <div class="col-12 col-lg-6">
+                      <div class="form-row mb-4 mb-lg-0">
+                        <div class="col-3">
+  
+                          <!-- Image -->
+                          <div class="embed-responsive embed-responsive-1by1 bg-cover" style="background-image: url(assets/img/products/product-5.jpg);"></div>
+  
+                        </div>
+                        <div class="col-3">
+  
+                          <!-- Image -->
+                          <div class="embed-responsive embed-responsive-1by1 bg-cover" style="background-image: url(assets/img/products/product-112.jpg);"></div>
+  
+                        </div>
+                        <div class="col-3">
+  
+                          <!-- Image -->
+                          <div class="embed-responsive embed-responsive-1by1 bg-cover" style="background-image: url(assets/img/products/product-7.jpg);"></div>
+  
+                        </div>
+                        <div class="col-3">
+  
+                          <!-- Image -->
+                          <div class="embed-responsive embed-responsive-1by1 bg-light">
+                            <a class="embed-responsive-item embed-responsive-item-text text-reset" href="#!">
+                              <div class="font-size-xxs font-weight-bold">
+                                +2 <br> más
+                              </div>
+                            </a>
+                          </div>
+  
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="form-row">
+                        <div class="col-6">
+  
+                          <!-- Button -->
+                          <a class="btn btn-sm btn-block btn-outline-dark" href="account-order.html">
+                            Detalles de Orden
+                          </a>
+  
+                        </div>
+                        <div class="col-6">
+  
+                          <!-- Button -->
+                          <a class="btn btn-sm btn-block btn-outline-dark" href="#!">
+                            Seguimiento de Orden
+                          </a>
+  
+                        </div>
+                      </div>
+  
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              
+              <!-- Pagination -->
+              <nav class="d-flex justify-content-center justify-content-md-end mt-10">
+                <ul class="pagination pagination-sm text-gray-400">
+                  <li class="page-item">
+                    <a class="page-link page-link-arrow" href="#">
+                      <i class="fa fa-caret-left"></i>
+                    </a>
+                  </li>
+                  <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">4</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">5</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">6</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link page-link-arrow" href="#">
+                      <i class="fa fa-caret-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+  
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+      <div class="modal fade" id="editProfileU" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="mb-0 font-weight-bold text-center" id="modalSigninVerticalTitle">
+                    Editar Perfil
+                </h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+              <div class="col-12 col-md-9 col-lg-8 offset-lg-1">
+
+                <!-- Form -->
+                <form>
+                  <div class="row">
+                    <div class="col-12">
+    
+                      <!-- Email -->
+                      <div class="form-group">
+                        <label for="accountFirstName">
+                          Nombre*
+                        </label>
+                        <input class="form-control form-control-sm" id="accountFirstName" type="text" placeholder="First Name *" value="Daniel" required="">
+                      </div>
+    
+                    </div>
+                    <div class="col-12">
+    
+                      <!-- Email -->
+                      <div class="form-group">
+                        <label for="accountLastName">
+                          Apellido*
+                        </label>
+                        <input class="form-control form-control-sm" id="accountLastName" type="text" placeholder="Last Name *" value="Robinson" required="">
+                      </div>
+    
+                    </div>
+                    <div class="col-12">
+    
+                      <!-- Email -->
+                      <div class="form-group">
+                        <label for="accountEmail">
+                          Email*
+                        </label>
+                        <input class="form-control form-control-sm" id="accountEmail" type="email" placeholder="Email Address *" value="user@email.com" required="">
+                      </div>
+    
+                    </div>
+                    <div class="col-12">
+    
+                      <!-- Password -->
+                      <div class="form-group">
+                        <label for="accountPassword">
+                          Contraseña*
+                        </label>
+                        <input class="form-control form-control-sm" id="accountPassword" type="password" placeholder="Current Password *" required="">
+                      </div>
+    
+                    </div>
+                    <div class="col-12">
+    
+                      <!-- Password -->
+                      <div class="form-group">
+                        <label for="AccountNewPassword">
+                          Nueva Contraseña*
+                        </label>
+                        <input class="form-control form-control-sm" id="AccountNewPassword" type="password" placeholder="New Password *" required="">
+                      </div>
+    
+                    </div>
+                    <div class="col-12">
+    
+                      <!-- Birthday -->
+                      <div class="form-group">
+    
+                        <!-- Label -->
+                        <label>Fecha de Nacimiento</label>
+    
+                        <!-- Inputs -->
+                        <div class="form-row">
+                          <div class="col-auto">
+    
+                            <!-- Date -->
+                            <label class="sr-only" for="accountDate">
+                              Fecha
+                            </label>
+                            <select class="custom-select custom-select-sm" id="accountDate">
+                              <option>10</option>
+                              <option>11</option>
+                              <option selected="">12</option>
+                            </select>
+    
+                          </div>
+                          <div class="col">
+    
+                            <!-- Date -->
+                            <label class="sr-only" for="accountMonth">
+                              Mes
+                            </label>
+                            <select class="custom-select custom-select-sm" id="accountMonth">
+                              <option>Enero</option>
+                              <option selected="">Febrero</option>
+                              <option>Marzo</option>
+                            </select>
+    
+                          </div>
+                          <div class="col-auto">
+    
+                            <!-- Date -->
+                            <label class="sr-only" for="accountYear">
+                              Año
+                            </label>
+                            <select class="custom-select custom-select-sm" id="accountYear">
+                              <option>1990</option>
+                              <option selected="">1991</option>
+                              <option>1992</option>
+                            </select>
+    
+                          </div>
+                        </div>
+    
+                      </div>
+    
+                    </div>
+                    <div class="col-12 col-lg-6">
+    
+                      <!-- Gender -->
+                      <div class="form-group mb-8">
+                        <label>Genero</label>
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                          <label class="btn btn-sm btn-outline-border active">
+                            <input type="radio" name="gender" checked=""> Masculino
+                          </label>
+                          <label class="btn btn-sm btn-outline-border">
+                            <input type="radio" name="gender"> Femenino
+                          </label>
+                        </div>
+                      </div>
+    
+                    </div>
+                  
+                  </div>
+                </form>
+    
+              </div>
+                            
+                        <!-- Submit -->
+                        <a class="btn btn-block btn-outline-dark" type="submit" href="users.html">
+                            Guardar
+                            </a>
+    
+    
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="modal fixed-right fade" id="modalSearch" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog modal-dialog-vertical" role="document">
+      <div class="modal-content">
+  
+          <!-- Close -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="fe fe-x" aria-hidden="true"></i>
+          </button>
+  
+          <!-- Header-->
+          <div class="modal-header line-height-fixed font-size-lg">
+          <strong class="mx-auto">Explorar Productos</strong>
+          </div>
+  
+          <!-- Body: Form -->
+          <div class="modal-body">
+          <form>
+              <div class="form-group">
+              <label class="sr-only" for="modalSearchCategories">Categorias:</label>
+              <select class="custom-select" id="modalSearchCategories">
+                  <option selected="">Todas las Categorias</option>
+                  <option></option>
+                  <option></option>
+                  <option></option>
+              </select>
+              </div>
+              <div class="input-group input-group-merge">
+              <input class="form-control" type="search" placeholder="Search">
+              <div class="input-group-append">
+                  <button class="btn btn-outline-border" type="submit">
+                  <i class="fe fe-search"></i>
+                  </button>
+              </div>
+              </div>
+          </form>
+          </div>
+  
+          <!-- Body: Results -->
+          <div class="modal-body border-top font-size-sm">
+  
+          <!-- Heading -->
+          <p>Resultados:</p>
+  
+          <!-- Items -->
+          <div class="row align-items-center position-relative mb-5">
+              <div class="col-4 col-md-3">
+  
+              <!-- Image -->
+              <img class="img-fluid" src="" alt="imagen">
+  
+              </div>
+              <div class="col position-static">
+  
+              <!-- Text -->
+              <p class="mb-0 font-weight-bold">
+                  <a class="stretched-link text-body" href="">Leather mid-heel Sandals</a> <br>
+                  <span class="text-muted">$129.00</span>
+              </p>
+  
+              </div>
+          </div>
+          <div class="row align-items-center position-relative mb-5">
+              <div class="col-4 col-md-3">
+  
+              <!-- Image -->
+              <img class="img-fluid" src="" alt="imagen">
+  
+              </div>
+              <div class="col position-static">
+  
+              <!-- Text -->
+              <p class="mb-0 font-weight-bold">
+                  <a class="stretched-link text-body" href="">Cotton floral print Dress</a> <br>
+                  <span class="text-muted">$40.00</span>
+              </p>
+  
+              </div>
+          </div>
+          <div class="row align-items-center position-relative mb-5">
+              <div class="col-4 col-md-3">
+  
+              <!-- Image -->
+              <img class="img-fluid" src="" alt="imagen">
+  
+              </div>
+              <div class="col position-static">
+  
+              <!-- Text -->
+              <p class="mb-0 font-weight-bold">
+                  <a class="stretched-link text-body" href="">Leather Sneakers</a> <br>
+                  <span class="text-primary">$85.00</span>
+              </p>
+  
+              </div>
+          </div>
+          <div class="row align-items-center position-relative mb-5">
+              <div class="col-4 col-md-3">
+  
+              <!-- Image -->
+              <img class="img-fluid" src="" alt="imagen">
+  
+              </div>
+              <div class="col position-static">
+  
+              <!-- Text -->
+              <p class="mb-0 font-weight-bold">
+                  <a class="stretched-link text-body" href="">Cropped cotton Top</a> <br>
+                  <span class="text-muted">$29.00</span>
+              </p>
+  
+              </div>
+          </div>
+          <div class="row align-items-center position-relative mb-5">
+              <div class="col-4 col-md-3">
+  
+              <!-- Image -->
+              <img class="img-fluid" src="" alt="imagen">
+  
+              </div>
+              <div class="col position-static">
+  
+              <!-- Text -->
+              <p class="mb-0 font-weight-bold">
+                  <a class="stretched-link text-body" href="#">Floral print midi Dress</a> <br>
+                  <span class="text-muted">$50.00</span>
+              </p>
+  
+              </div>
+          </div>
+  
+          <!-- Button -->
+          <a class="btn btn-link px-0 text-reset" href="">
+              Ver todo<i class="fe fe-arrow-right ml-2"></i>
+          </a>
+  
+      </div>
+  
+      <!-- Body: Empty (remove `.d-none` to disable it) -->
+      <div class="d-none modal-body">
+  
+          <!-- Text -->
+          <p class="mb-3 font-size-sm text-center">
+              No hay coincidencia con tu busqueda
+          </p>
+  
+  
+      </div>
+      </div>
+      </div>
+  </div>
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="js/bootstrap.min.js"></script>
+  
+</body>
+</html>
