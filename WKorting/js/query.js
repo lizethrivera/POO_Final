@@ -25,7 +25,6 @@ $(document).ready(function(){
 
 
 
-
 var open = document.getElementById('hamburger');
 var changeIcon = true;
 
@@ -46,7 +45,3 @@ open.addEventListener("click", function(){
     }
     else {
         icon.classList.remove("fa-times");
-        icon.classList.add("fa-bars");
-        changeIcon = true;
-    }
-});
