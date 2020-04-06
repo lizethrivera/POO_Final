@@ -44,10 +44,12 @@
 
 #backText{
     color: #ffffff;
-    margin-top: auto;
-    padding: 200px 50px 30px 70px;
+    
+    padding: 150px 100px ;
     transition: all .5s ease-in-out;
+    justify-content: space-between;
     text-align: center;
+    font-size: 14px;
 }
 
 #profileE{

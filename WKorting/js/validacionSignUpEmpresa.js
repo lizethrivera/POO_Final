@@ -78,7 +78,7 @@ function guardarInformacionEmpresa(){
     console.log(JSON.stringify(informacion));
     logins.push(informacion);
     localStorage.setItem('logins', JSON.stringify(logins));
-    window.location = "index2.html";
+    window.location = "enterprise.html";
     }
 }
 

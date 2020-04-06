@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="shortcut icon" href="img/Sin título-1.png">
     <script src="js/wow.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
 
     <script>
         new WOW().init();
@@ -119,7 +122,71 @@
 </div>
 
 
+<div id="testimonios" >
 
+    <section id="testimonials">
+        <div id="testimonials-cover">        
+            <div class="containerT">
+                <h3 class="text-center">Lo que opinan nuestros usuarios.</h3>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="customers-testimonials" class="text-center owl-carousel owl-theme">
+                            <div class="testimonial">
+                                <img src="img/cliente.jpg" class="img-responsive img-circle" srcset="">
+    
+                                <blockquote class="text-center">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                </blockquote>
+    
+                                <div class="testimonial-author">
+                                    <p>
+                                        <strong>Reah Watrosu</strong>
+                                        <span>CEO & Fundador - Fabel</span>
+                                    </p>
+                                </div>
+    
+                            </div>
+    
+                            <div class="testimonial">
+                                <img src="img/cliente2.jpg" class="img-responsive img-circle" srcset="">
+    
+                                <blockquote class="text-center">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                </blockquote>
+    
+                                <div class="testimonial-author">
+                                    <p>
+                                        <strong>Reah Watrosu</strong>
+                                        <span>CEO & Fundador - Fabel</span>
+                                    </p>
+                                </div>
+    
+                            </div>
+    
+                            <div class="testimonial">
+                                <img src="img/cliente3.jpg" class="img-responsive img-circle" srcset="">
+    
+                                <blockquote class="text-center">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                </blockquote>
+    
+                                <div class="testimonial-author">
+                                    <p>
+                                        <strong>Reah Watrosu</strong>
+                                        <span>CEO & Fundador - Fabel</span>
+                                    </p>
+                                </div>
+    
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    
 <!--Promotion & quoted info -->
 <div class="wow fadeInUp ">
 <section class="secondText" style="padding-bottom: 75px;" >
@@ -1208,6 +1275,7 @@
 </div>
 </div>
 
+
         
             <script>
                 // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -1230,6 +1298,20 @@
                 })();
                 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+<script>
+    $(function(){
+        $("#customers-testimonials").owlCarousel({
+            items:1,
+            autoplay: true,
+            smartSpeed: 700,
+            loop: true,
+            autoPlayHoverPaus: true
+        });
+    });
+</script>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/validation.js"></script>
