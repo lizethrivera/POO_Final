@@ -738,7 +738,7 @@ body #productos{
 	display: block;
 }
 
-.fa-cart-plus{
+#vistas .fa-cart-plus{
 	
 	background-color: rgba(0,0,0,0.8);
 	border-bottom: 1px solid rgba(112, 112, 112, .60);	
@@ -759,7 +759,7 @@ body #productos{
 	transition: ease-in 0.5s;
 }
 
-.fa-cart-plus:hover{
+#vistas .fa-cart-plus:hover{
 	background-color: white;
 	color: black;
 	transition: ease-in .5s;

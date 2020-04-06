@@ -43,10 +43,10 @@ if(localStorage.getItem("informacion") == null){
 console.log(informacionE)
 
 
-window.onload = start;
+window.onload = Inicio;
 
 
-function start(){
+function Inicio(){
 
     console.log("Inicio Validaciones");
     document.getElementById("registrarEmpresa").addEventListener('click', guardarInformacionEmpresa, false);
@@ -541,3 +541,7 @@ function validarConfirmacionContraseñaEmpresa(){
     return true;
 }
     }
+
+
+
+    
