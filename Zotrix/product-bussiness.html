@@ -123,10 +123,10 @@
     </header>
     <!--End Navigation-->
 
-    <section class="all-about-sucur mb-5">
+    <section class="all-about-product mb-5">
         <div class="input-Sucur">
-            <form>
-                <div class="mb-3 mt-3 text-center">
+            <form id="all-info">
+                <div class="mb-4 mt-3 text-center">
                     <h2>MIS PRODUCTOS</h2>
                 </div>
                 
@@ -148,75 +148,57 @@
                     
                 </div>
 
+                
                 <div id="info-Bunch">
                     <div class="form-row">
                     <div class="col-md-4 mb-3">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-address-book"></i></span>
+                        <div class="col-md-12 mb-3">
+                            <span></span><label for="validationDefault01">Imagen del Producto</label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+                                <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
                             </div>
-                            <input id="imgProduct" type="file">
-                        </div>
+                    </div>
                     </div>
                     <div class="col-md-8 mb-3">
                         <div class="row rowws" >
                             <div class="col-md-12 mb-3">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-address-book"></i></span>
-                                    </div>
-                                    <input type="text" class="form-control rounded-right" placeholder="Nombre del Producto" id="nombreProducto" required>
-                                </div>
+                                <span></span><label for="validationDefault01">Nombre del Producto</label>
+                                <input type="text" class="form-control" id="nombreProducto" placeholder="Nombre del Producto" required>
                         </div>
                             <div class="col-md-12 mb-3">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-address-book"></i></span>
-                                    </div>
-                                    <textarea type="text" class="form-control rounded-right" placeholder="Descripcion del Producto" id="descripcionProducto" required cols="30" rows="5"></textarea>
-                                    
-
-                        </div>
-                        
-                    </div>
+                                    <label for="validationTextarea">Descripcion</label>
+                                    <textarea type="text" class="form-control rounded-right" placeholder="Agrega alguna descripcion breve!" id="descripcionProducto" required cols="30" rows="5"></textarea>
+                            </div>
                     </div>
                     </div>
                     </div>
 
                     <form mt-5 action="" >
-                        <div class="row" id="options">
-                            <div class="col-4">
-                                <h2>Precio</h2>
-                            </div>
-                            <div class="col-4">
-                                <h2>Stock</h2>
-                            </div>
-                            <div class="col-4">
-                                <h2>Categoria</h2>
-                            </div>
-
-                        </div>
-
                         <div class="row">
                             <div class="col-4">
-                                <div class="input-group">
-                                    <input type="text" class="form-control rounded-right" placeholder="0.00" id="nombreProducto" required>
+                                <label for="validationTextarea">Precio</label>
+                                <div class="input-group input-group-sm">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">USD</span>
+                                    </div>
+                                    <input type="text" class="form-control rounded-right" placeholder="0.00" id="precioProducto" required>
                                 </div>
+                                
+                                    
                             </div>
                             <div class="col-4">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">                                    
-                                    </div>
-                                    <input type="text" class="form-control rounded-right" placeholder="0" id="nombreProducto" required>
+                                <label for="validationTextarea">Stock</label>
+                                    <input type="text" class="form-control rounded-right" placeholder="0" id="stockProducto" required>
                                     <div class="custom-control custom-switch">
                                         <input type="checkbox" class="custom-control-input" id="customSwitch1">
                                         <label class="custom-control-label" for="customSwitch1">Ilimitado</label>
                                     </div>
-                                </div>
                             </div>
 
                             <div class="col-4">
-                                <select class="custom-select custom-select-md">
+                                <label for="validationTextarea">Categoria</label>
+                                <select class="custom-select custom-select-md" id="categoriaProducto">
                                     <option selected>Categoria</option>
                                     <option value="1">Calzado</option>
                                     <option value="2">Vestimenta de Mujer</option>
@@ -295,7 +277,7 @@
 <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
 <link rel="stylesheet"  type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-<link rel="stylesheet" href="css/bunch-office.css">
+<link rel="stylesheet" href="css/product-bussinesss.css">
 <script src="js/query.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
