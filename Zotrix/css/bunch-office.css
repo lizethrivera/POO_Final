@@ -1,5 +1,4 @@
 *{
-    font-family: "Roboto Cn", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -292,4 +291,45 @@ header a:hover{
 .botones{
     width: 500px;
     margin-left: auto;
+}
+
+
+.page-link{
+
+    color: grey!important;
+}
+
+.page-link:focus, .paginate_button:focus{
+    outline: 0!important;
+}
+
+
+li:focus {
+
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none!important;
+    -webkit-box-shadow: none!important;
+}
+
+
+.paginate_button{
+    background-color: #FCB117;
+}
+
+.page-item.disabled .page-link {
+    border: none!important;
+    
+}
+
+.page-item.active .page-link{
+    background-color: #FCB117!important;
+    box-shadow: 1px solid grey!important;
+    outline: none!important;
+    border: none!important;
+}
+
+.page-item.active>.page-link {
+    box-shadow: 0 0.5rem 1.125rem -0.425rem rgba(254,105,106,0.9)!important;
 }

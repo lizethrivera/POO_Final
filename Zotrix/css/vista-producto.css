@@ -68,7 +68,7 @@ header a:hover{
     }
 
     #formicons{
-        margin-left: 35%;
+        margin-left: 43%;
     }
 
     .ulnavs{
@@ -76,7 +76,8 @@ header a:hover{
     }
 
     .logo{
-        margin-left: 23%!important;
+        /*margin-left: 23%!important;*/
+        text-align: center!important;
     }
 
     .Services{
@@ -95,11 +96,6 @@ header a:hover{
     #perfil-drop{
         margin-left: auto!important;
         width: auto!important;
-    }
-
-    #search{
-        margin-left: 30%!important;
-        width: 100px!important;
     }
 }
 
@@ -215,37 +211,54 @@ header a:hover{
     margin-top: 12px!important;
 }
 
-#nombreProducto{
-    font-size: 16px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #FCB117;
+
+#sucur-Info h2{
+    margin: 15px 0;
+	color: rgb(26, 16, 16);
+	text-transform: uppercase;
+	font-size: 2rem;
 }
 
-span{
-    text-decoration: none;
+.all-about-product{
+    margin: 50px 140px 10px 140px;
+    
 }
 
-.badge{
-    background-color: #FCB117;
+
+.all-about-product i{
+    background: none;
 }
 
-.detalle{
-    font-size: 16px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #FCB117;
-
+.all-about-product span{
+    background: none!important;
+    border: none!important;
 }
 
-a{
-    text-decoration: none!important;
+.botones{
+    width: 500px;
+    margin-left: auto;
 }
 
-#ordenNo{
-    color: rgb(245, 165, 6);
-    font-weight: 700;
+.rowws{
+    margin-left: 15px!important;
 }
+
+#options h2{
+    margin: 15px 0;
+	color: rgb(26, 16, 16);
+	text-transform: uppercase;
+	font-size: 1rem;
+}
+
+input:focus, input.form-control:focus, button:focus {
+
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
 
 .page-link{
 
@@ -283,3 +296,124 @@ li:focus {
     border: none!important;
 }
 
+
+
+.orange-bk{
+    margin-top: 40px;
+    background-color: #FCB117;
+    height: 250px;
+}
+
+.white{
+    background-color: #FFFFFF;
+    height: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: -280px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #999;
+}
+
+.nombre{
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+#info-Product{
+    padding: 25px;
+}
+
+
+
+img.zoom {
+    width: 350px;
+    height: 200px;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+}
+
+.transition {
+    -webkit-transform: scale(1.8); 
+    -moz-transform: scale(1.8);
+    -o-transform: scale(1.8);
+    transform: scale(1.8);
+}
+.imagen{
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+input[type=radio] {
+    width: 100%;
+    height: 2em;
+}
+
+p.clasificacion {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+p.clasificacion input {
+    position: absolute;
+    top: -100px;
+}
+
+p.clasificacion label {
+    float: right;
+    color: #333;
+    font-size: 20px;
+}
+
+p.clasificacion label:hover,
+p.clasificacion label:hover ~ label,
+p.clasificacion input:checked ~ label {
+    color: #FEA86E;
+}
+
+.wish{
+    text-decoration: none;
+
+}
+
+.btn-wishlist {
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0 !important;
+    transition: color 0.25s ease-in-out,background-color 0.25s ease-in-out,border-color 0.25s ease-in-out,box-shadow 0.2s ease-in-out;
+    border: 0;
+    border-radius: 50%;
+    background-color: #f3f5f9;
+    color: #373f50;
+    text-align: center;
+}
+
+.btn-wishlist:hover{
+    color: #fe696a;
+}
+
+.btn-primary.btn-shadow {
+    box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(254,105,106,0.9);
+}
+
+.btn-primary{
+    background-color: #fe696a!important;
+    border-color: #fe696a!important;
+}
+
+h3 a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #FCB117;
+    text-transform: uppercase;
+}
+
+h3 a:hover{
+    font-size: 16px;
+    text-decoration: none;
+    color: #FCB117;
+    text-transform: uppercase;
+}

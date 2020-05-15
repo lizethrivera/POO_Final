@@ -1,5 +1,4 @@
 *{
-    font-family: "Roboto Cn", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -283,3 +282,41 @@ input:focus, input.form-control:focus, button:focus {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
 }
+
+
+.page-link{
+
+    color: grey!important;
+}
+
+.page-link:focus, .paginate_button:focus{
+    outline: 0!important;
+}
+
+
+li:focus {
+
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none!important;
+    -webkit-box-shadow: none!important;
+}
+
+
+.paginate_button{
+    background-color: #FCB117;
+}
+
+.page-item.disabled .page-link {
+    border: none!important;
+    
+}
+
+.page-item.active .page-link{
+    background-color: #FCB117!important;
+    box-shadow: 1px solid grey!important;
+    outline: none!important;
+    border: none!important;
+}
+

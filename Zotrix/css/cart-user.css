@@ -222,3 +222,41 @@ header a:hover{
     margin-bottom: 15px;
     box-shadow: 3px 3px 5px #999;
 }
+
+#nombreProducto{
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FCB117;
+}
+
+span{
+    text-decoration: none;
+}
+
+.badge{
+    background-color: #FCB117;
+}
+
+.detalle{
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FCB117;
+
+}
+
+a{
+    text-decoration: none!important;
+}
+
+
+.btn-primary{
+    background-color: rgb(233, 33, 33)!important;
+    outline: rgb(233, 33, 33)!important;
+    border: none;
+}
+
+.infoProduct{
+
+}

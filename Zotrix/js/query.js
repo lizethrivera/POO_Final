@@ -121,3 +121,35 @@ function mostrarOcultarContenido(){
 	}
 }
 }
+
+
+function mostrarOcultarPromocion(){
+
+
+    if ( $('#nuevoSucursal').hasClass('agregar') ) { 
+		console.log("Entro");
+		$('#info-Bunch').show();
+		$('#nuevoSucursal').removeClass('agregar');
+        $('#nuevoSucursal').addClass('cancelar');
+	}else{
+		if ( $('#nuevoSucursal').hasClass('cancelar') ) { 
+			console.log("asd");
+			$('#info-Bunch').hide();
+			//console.log(togg);
+			//togg= document.getElementById("buton").title = "Agregar Sucursal";
+			//console.log(togg);
+			$('#nuevoSucursal').removeClass('cancelar');
+            $('#nuevoSucursal').addClass('agregar');
+	}
+}
+}
+
+
+function ocultarPromocion(){
+    if ( $('#cerrarDiv').hasClass('cerrar') ) { 
+        console.log("asd");
+        $('#info-Bunch').hide();
+    }
+}
+
+
