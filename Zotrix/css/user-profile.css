@@ -1,5 +1,8 @@
+:root{
+    --color: #FCB117;
+}
+
 *{
-    font-family: "Roboto Cn", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,6 +14,15 @@ html,body{
 }
 
 /*Navbar Styles*/
+.menu-fixed {
+	position:fixed;
+	z-index:1000;
+	top:0;
+
+	width:100%;
+	box-shadow:0px 4px 3px rgba(0,0,0,.5);
+}
+
 .somtitle{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
     text-align: center; 
@@ -214,5 +226,373 @@ header a:hover{
 
 #input-search input{
     margin-top: 12px!important;
+}
+
+/*Sliders*/
+.sliders{
+    height: 100%;
+}
+
+.site-slider{
+    position: relative;
+}
+
+.position-top{
+    position: absolute;
+    top: 50%;
+
+}
+
+body #Cuerpo{
+    overflow-x: hidden;
+    padding-top: 0px;
+}
+
+.profile-header{
+    background: #ffff;
+    background-image: url(../img/landing/backgroundimage.png);
+    background-position: 0% 9%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    height: 40vh;
+    position: relative;
+    box-shadow: 0px 3px 4px rgba(0,0,0,0.2);
+}
+
+.profile-header .profile-banner{
+    background: #ffff;
+    width: 100%;
+    display: flex;
+    height: 198px;
+    position: relative;
+    box-shadow: 0px 3px 4px rgba(0,0,0,0.2);
+}
+
+
+
+.profile-img{
+    float: left;
+    width: 348px;
+    height: 288px;
+}
+
+.profile-img img{
+    border-radius: 56%;
+    height: 238px;
+    width: 230px;
+    border: 4px solid none;
+    box-shadow: 6px 5px 10px rgba(0,0,0,0.2);
+    position: absolute;
+    left: 50px;
+    top: 20px;
+    z-index: 5;
+    background: #ffff;
+}
+
+.profile-nav-info{
+    float: left;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.profile-nav-info h3{
+    font-variant: small-caps;
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+
+.profile-nav-info .address{
+    display: flex;
+    font-weight: bold;
+    color: #777777;
+}
+
+.profile-nav-info .address p{
+    margin-right: 5px;
+}
+
+.profile-option {
+    width: 40px;
+    height: 40px;
+    background: #FCB117;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    outline: none;
+}
+
+.profile-option .notification i{
+    color: #ffff;
+    font-size: 1.2rem;
+    transition: all .5s ease-in-out;
+}
+
+.profile-option:hover{
+    background: #ffff;
+    border: 1px solid #FCB117;
+}
+
+.profile-option:hover .notification i{
+    color: #F16F21;
+}
+
+.profile-option .notification .alert-message{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ffff;
+    color: var(--color);
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.main-bd{
+    width: 100%;
+    display: flex;
+    padding-right: 15px;
+}
+
+.profile-side{
+    width: 300px;
+    background: #ffff;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+    padding: 90px 30px 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 10px;
+    z-index: 99;
+}
+
+.profile-side p{
+    margin-bottom: 7px;
+    color: #333333;
+    font-size: 14px;
+}
+
+
+.profile-side p i{
+    color: var(--color);
+    margin-right: 10px;
+}
+
+.mobile-number i{
+    transform: rotateY(180deg);
+}
+
+.profile-btn{
+    display: flex;
+}
+
+button.chatbtn,
+button.createbtn{
+    border: 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    background: var(--color);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    margin: 5px 2px;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 10px;
+    transition: background .3s ease-in-out;
+    box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.2);
+    color: #ffff;
+}
+
+button.chatbtn:hover,
+button.createbtn:hover{
+    background: rgba(241, 111, 33, .9);
+}
+
+button.chatbtn i,
+button.createbtn i{
+    margin-right: 5px;
+}
+
+.user-rating{
+    display: flex;
+}
+
+.user-rating h3{
+    font-size: 2.0rem;
+    font-weight: 200;
+    margin-right: 5px;
+    letter-spacing: 1px;
+    color: #666666;
+}
+
+.user-rating .no-user{
+    font-size: .9rem;
+}
+
+.rate{
+    padding-top: 6px;
+}
+
+.rate i{
+    font-size: .9rem;
+    color: var(--color);
+}
+
+.nav{
+    width: 100%;
+    z-index: -1;
+}
+
+.right-side{
+    width: 100%;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    width: 100%;
+    height: 40px;
+    background: #ffff;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+}
+
+.nav ul li{
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    transition: all .2s ease-in-out;
+}
+
+.nav ul li.active,
+.nav ul li:hover{
+    box-shadow: 0px -3px 0px rgba(241, 111, 33, .9) inset;
+
+}
+
+.profile-body{
+    width: 100%;
+    z-index: -1;
+}
+
+.tab{
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+#see-more-bio,
+#see-less-bio{
+    color: blue;
+    cursor: pointer;
+    text-transform: lowercase;
+}
+
+@media(max-width: 968px){
+    body #Cuerpo{
+        margin: 0 0;
+        width: 100%;
+    }
+
+    .profile-header{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .profile-img{
+        float: left;
+        width: 100%;
+        height: 200px;
+    }
+
+    .profile-img img{
+        position: relative;
+        left: 0;
+    }
+
+    .profile-nav-info{
+        text-align: center;
+    }
+
+    .profile-nav-info .address{
+        justify-content: center;
+    }
+
+    .profile-option{
+        right: 20px;
+        top: 75%;
+        transform: translateY(50%);
+    }
+
+    .main-bd{
+        flex-direction: column;
+        padding-right: 8px;
+    }
+
+    .profile-side{
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        margin: 5px 0;
+    }
+
+    .user-rating{
+        justify-content: center;
+    }
+
+
+    @media(max-width: 400px){
+        body #Cuerpo{
+            margin: 5px;
+        }
+
+        .profile-header h3{
+            font-size: 1.7rem;
+        }
+
+        .profile-header p,
+        .profile-header span{
+            font-size: .9rem;
+        }
+
+        .profile-option{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 15px;
+            top: 83%;
+        }
+
+        .profile-option .notification .alert-message{
+            top: -3px;
+            right: -4px;
+            padding: 4px;
+            height: 15px;
+            width: 15px;
+            font-size: .7rem;
+
+        }
+    }
 }
 

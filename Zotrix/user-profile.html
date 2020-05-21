@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Ordenes</title>
+    <title>Perfil</title>
 
     <link  rel="icon"   href="img/logoex.png" type="image/png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/User-profile.css">
     <link rel="stylesheet" href="css/animate.css">
+
+    
 </head>
 <body>
 
@@ -30,16 +32,16 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tienda</a>
+                    <a class="nav-link" href="shop-user.html">Tienda</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Productos</a>
+                    <a class="nav-link" href="product.html">Productos</a>
                 </li>
 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Empresas</a>
+                    <a class="nav-link" href="bussiness-view.html">Empresas</a>
                 </li>
 
             </ul>
@@ -106,7 +108,6 @@
 
                                         <div class="infoUser">
                                             <a class="dropdown-item" href="#"><i class="fas fa-users-cog"></i> Configuracion</a>
-                                            <a class="dropdown-item" href="#"><i class="fas fa-globe"></i> Idioma</a>
                                         </div>
 
                                         <div class="closeUser">
@@ -122,10 +123,120 @@
             </div>
         </nav>
     </header>
-
     <!--End Navigation-->
 
+    <!--Perfil-->
+    <main>
+        <div class="" id="Cuerpo">
+            <div class="profile-header">
+                <div class="profile-img">
+                    <img src="img/navbarPerfil/Merida-brave-35550159-417-500.jpg" width="200" alt="" srcset="">
+                </div>
     
+                <div class="profile-nav-info">
+                    <h3 class="user-name">
+                        Iliana Pineda
+                    </h3>
+    
+                    <div class="address">
+                        <p class="state">New York,</p>
+                        <span class="country">
+                            USA.
+                        </span>
+                    </div>
+                </div>
+    
+                <div class="profile-option">
+                    <div class="notification">
+                        <i class="fa fa-bell"></i>
+                        <span class="alert-message">1</span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="main-bd">
+                <div class="left-side">
+                    <div class="profile-side">
+                        <p class="mobile-no">
+                            <i class="fa fa-phone"></i>
+                            +504 33872698
+                        </p>
+    
+                        <p class="user-mail">
+                            <i class="fa fa-envelope"></i>
+                            iliana@yahoo.com
+                        </p>
+    
+                        <div class="user-bio">
+                            <p class="bio">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, modi error minus architecto voluptatibus molestiae dolore impedit natus aperiam similique magni deleniti quam voluptates illo, explicabo at, magnam eum eos?. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis molestiae temporibus tempora maxime animi ullam, harum quam. Deleniti quaerat natus nulla sequi. Natus distinctio sapiente ratione architecto voluptatem incidunt.
+                            </p>
+                        </div>
+    
+                        <div class="profile-btn">
+                            <button class="chatbtn">
+                                <i class="fa fa-comment"></i>Chat
+                            </button>
+    
+                            <button class="createbtn">
+                                <i class="fa fa-plus"></i>Create
+                            </button>
+                        </div>
+    
+                        <div class="user-rating">
+                            <h3 class="rating">
+                                4.5
+                            </h3>
+    
+                            <div class="rate">
+                                <div class="stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                
+                                <span class="no-user">
+                                    <span>123</span>&nbsp;&nbsp; Reviews
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="right-side" width:100%>
+                    <div class="nav">
+                        <ul>
+                            <li onclick="tabs(0)" class="user-post active">-</li>
+                            <li onclick="tabs(1)" class="user-review">Comentarios</li>
+                            <li onclick="tabs(2)" class="user-setting">Siguiendo</li>
+                        </ul>
+                    </div>
+    
+                    <div class="profile-body">
+                        <div class="profile-posts tab">
+                            <h1>Your posts</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nam quis totam inventore provident, et iure explicabo ut animi iste vero? Asperiores quam adipisci iusto eum, culpa in nemo? Dicta.</p>
+                        </div>
+    
+                        <div class="profile-review tab">
+                            <h1>Your Reviews</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nam quis totam inventore provident, et iure explicabo ut animi iste vero? Asperiores quam adipisci iusto eum, culpa in nemo? Dicta.</p>
+                        </div>
+    
+                        <div class="profile-setting tab">
+                            <h1>Your Settings</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nam quis totam inventore provident, et iure explicabo ut animi iste vero? Asperiores quam adipisci iusto eum, culpa in nemo? Dicta.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
@@ -133,5 +244,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 <script src="js/query.js"></script>
+<script src="js/user-profile.js"></script>
 </body>
 </html>
