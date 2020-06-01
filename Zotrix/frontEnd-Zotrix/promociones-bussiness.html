@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Productos</title>
+    <title>Mis Promociones</title>
 
     <link  rel="icon"   href="img/logoex.png" type="image/png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -75,7 +75,7 @@
                     <li class="nav-item dropdown" id="perfil">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             
-                                <img src="img/navbarPerfil/c6940bbd1ef6607f347078e2a471213e.jpg" alt="" class="circulo-Perfil">
+                                <img src="img/landingShop/empresa6.jpg" alt="" class="circulo-Perfil">
                         </a>
                         <div class="dropdown-menu drop" id="perfil-drop" aria-labelledby="navbarDropdownMenuLink">
                             <!--IMG Dropdown Inside-->
@@ -84,12 +84,12 @@
                                     <div class="row">
                                         <div class="col-4">
                                             <a href="config-pbussiness.html">
-                                                <img src="img/navbarPerfil/c6940bbd1ef6607f347078e2a471213e.jpg" alt="" class="circulo-Perfil-In">
+                                                <img src="img/landingShop/empresa6.jpg" alt="" class="circulo-Perfil-In">
                                             </a>
                                         </div>
                     
                                         <div class="col-8 left">
-                                            <h8>Riveras Company</h8>
+                                            <h8>The North Face</h8>
                                             <br>
                                             <h8>Platino</h8>
                                             </div>
@@ -97,6 +97,7 @@
                                     </div>
                                     
                                     <div class="aboutUser">
+                                        <a class="dropdown-item" href="bussiness-profile.html"><i class="fas fa-user-tie"></i> Perfil</a>
                                         <a class="dropdown-item" href="bunch-office.html"><i class="far fa-building"></i> Sucursales</a>
                                         <a class="dropdown-item" href="product-bussiness.html"><i class="fas fa-cubes"></i> Productos</a>
                                         <a class="dropdown-item" href="promociones-bussiness.html"><i class="fas fa-percent"></i> Promociones</a>
@@ -126,10 +127,13 @@
         <div class="input-Sucur">
             <form id="all-info">
                 <div class="mb-4 mt-3 text-center">
-                    <h2>MIS PRODUCTOS</h2>
+                    <h2>MIS PROMOCIONES</h2>
                 </div>
                 
-                <div class="mb-4 botones">
+
+                
+                <div id="info-Bunch">
+                    <div class="mb-4 botones">
                     <div class="row">
                         <div class="col-6">
                             <div class="" id="guardar">
@@ -139,16 +143,13 @@
 
                         <div class="col-6">
                             <div class="">
-                                <button type="button" class="btn agregar" id="nuevoSucursal" onclick="mostrarOcultarContenido()">Agregar</button>
+                                <button type="button" class="btn cerrar" id="cerrarDiv" onclick="ocultarPromocion()">Cerrar</button>
                             </div>
                         </div>
                         </div>
 
                     
                 </div>
-
-                
-                <div id="info-Bunch">
                     <div class="form-row">
                     <div class="col-md-4 mb-3">
                         <div class="col-md-12 mb-3">
@@ -237,34 +238,7 @@
                         </div>
                     </form>
 
-                    <form mt-5 action="" >
-                            <div class="col-4 mt-5 mb-5">
-                                <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="customSwitch2">
-                                    <label class="custom-control-label" for="customSwitch2">En promocion?</label>
-                                    
-                                </div>
-                            </div>
-                            <div class="row" id="divPromocion">
-                                <div class="col-4">
-                                    <label for="validationTextarea">Precio en Promocion</label>
-                                    <div class="input-group input-group-sm">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">USD</span>
-                                        </div>
-                                        <input type="text" class="form-control rounded-right" placeholder="0.00" id="precioProducto" required>
-                                    </div>
-                                </div>
-
-                                <div class="col-4">
-                                    <label for="validationTextarea">Fecha Limite</label>
-                                    <div class="input-group input-group-sm">
-                                        <input type="date" class="form-control rounded-right" placeholder="0.00" id="precioProducto" required>
-                                    </div>
-                            
-                        </div>
-                    </div>
-                    </form>
+                    
                 </div>
             </form>
         </div>
@@ -296,20 +270,7 @@
                             <tbody>
                                 <tr>
                                     <td ><img src="img/products/81b6zZQEM0L._AC_UX500_.jpg" class="justify-content-center"style="height: 2rem;"></td>
-                                    <td>Zapatilla MENX</td>
-                                    <td>Zapato para caballero</td>
-                                    <td>$ 30.00</td>
-                                    <td>$ 0.00</td>
-                                    <td>3</td>
-                                    <td><span class="badge badge-success m-0">Normal</span></td>
-                                    <td>-</td>
-                                    <td>Calzado</td>
-                                    <td><a href="#"> <i class="fas fa-edit"></i></a> <a href="#"> <i class="fas fa-trash-alt"></i></a></td>
-    
-                                </tr>
-                                <tr>
-                                    <td ><img src="img/products/81b6zZQEM0L._AC_UX500_.jpg" class="justify-content-center"style="height: 2rem;"></td>
-                                    <td>Zapatilla MENX</td>
+                                    <td><a type="button" class="agregar" id="nuevoSucursal" onclick="mostrarOcultarPromocion()">Zapatilla MENX</a></td>
                                     <td>Zapato para caballero</td>
                                     <td>$ 30.00</td>
                                     <td>$ 15.00</td>
@@ -317,10 +278,9 @@
                                     <td><span class="badge badge-danger m-0">Promocion</span></td>
                                     <td>Mayo 17</td>
                                     <td>Calzado</td>                                    
-                                    <td><a href="#"> <i class="fas fa-edit"></i></a> <a href="#"> <i class="fas fa-trash-alt"></i></a></td>
+                                    <td><a href="#"> <i class="fas fa-eye"></i></a> <a href="#"> <i class="fas fa-trash-alt"></i></a></td>
     
-    
-                                </tr>                
+                                </tr>
                             </tbody>        
                             </table>                  
                         </div>
@@ -337,7 +297,7 @@
 <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
 <link rel="stylesheet"  type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-<link rel="stylesheet" href="css/product-bussinesss.css">
+<link rel="stylesheet" href="css/promociones.css">
 <script src="js/query.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
