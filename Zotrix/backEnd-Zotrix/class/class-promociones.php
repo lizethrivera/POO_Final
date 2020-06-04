@@ -34,7 +34,7 @@
                 $sucursales = array();
 
                 //array_push($sucursales,$sucursal);
-                echo json_encode($sucursal);
+                //echo json_encode($sucursal);
 
                 for($i=0; $i<sizeof($empresas);$i++){
                         $productos = $empresas[$i]["productos"];                                
@@ -42,12 +42,14 @@
                                 if($productos[$j]['productCode'] == $productCode){ 
                                     $precio = $productos[$j]["precioProducto"];
                                     $Descuento = ($precioOtro/$precio)*100;
+                                    $precioFinal = $precio-$precioOtro;
                                     //echo($Descuento);
                                         if(empty($productos[$j]["promocionProducto"])){
                                             $productos[$j]["promocionProducto"][] = array(
                                                 "promocionCode"=>$promocionCode,
                                                 "porcentajeDescuento"=>$Descuento,
                                                 "precioOferta"=>$precioOtro,
+                                                "precioFinal"=>$precioFinal,
                                                 "fechaInicioPromocion"=>$this->fechaInicioPromocion,
                                                 "fechaFinalPromocion"=>$this->fechaFinalPromocion,
                                                 "sucursales"=>$sucursal
@@ -75,7 +77,6 @@
                         echo json_encode($empresa);
 
                 
-                echo json_encode($resultado);
                 
 
                 
@@ -85,7 +86,7 @@
         public static function obtenerProductosPromocion(){
             $contenidoArchivoEmpresas = file_get_contents('../data/empresas.json');
             $empresas = json_decode($contenidoArchivoEmpresas, true);
-            //$promocion = null;
+            $promocion= array();
 
 
             for($i=0; $i<sizeof($empresas); $i++){
@@ -94,19 +95,19 @@
                     for($j=0; $j<sizeof($productos); $j++){
                         if(array_key_exists("promocionProducto", $productos[$j])){
                             if(empty($productos[$j]["promocionProducto"])){
-                                echo ("No hay productos en promocion!");
-                            break;
+                                //echo ("No hay productos en promocion!");
+                            
 
                             }else{
-                                $promocion = $productos[$j];
-                                echo json_encode($promocion);
+                                array_push($promocion,$productos[$j]);
+                                
                             }
                         }
                     }
                 }
             }
 
-            
+            echo json_encode($promocion);
         }
 
 
@@ -124,7 +125,8 @@
                 for($j=0; $j<sizeof($productos); $j++){
                     if($productos[$j]["productCode"] == $productCode){
                         if(empty($productos[$j]["promocionProducto"])){
-                            echo ("No hay promocion del producto!");
+                            
+                            //echo ("No hay promocion del producto!");
                         }else{
                             $promocion = $productos[$j]["promocionProducto"];
                             for($k=0; $k<sizeof($promocion); $k++){

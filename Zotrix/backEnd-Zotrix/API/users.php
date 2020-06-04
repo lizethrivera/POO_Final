@@ -1,7 +1,9 @@
 <?php
 
     header("Content-Type: application/json");
-    include_once("../class/class-user.php");
+    include("../class/class-user.php");
+
+
     $_POST = json_decode(file_get_contents('php://input'), true);
     $_PUT = json_decode(file_get_contents('php://input'), true);
 

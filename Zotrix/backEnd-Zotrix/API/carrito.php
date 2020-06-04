@@ -11,11 +11,12 @@
             //Guardamos
             $Carrito = new Carrito(
                 $_POST['cantidad'],
-                $_POST['talla'],
-                $_POST['color'],
+                $_POST['nombreProducto'],
+                $_POST['descripcionProducto'],
                 $_POST['fechaCompra'],
                 $_POST['estadoOrden'],
-                $_POST['precio']
+                $_POST['precio'],
+                $_POST['precioFinal']
 
             );
 

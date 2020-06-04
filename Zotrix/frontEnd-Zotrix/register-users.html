@@ -64,14 +64,18 @@
                                     </div>
                                 </div>
 
+                                .file[0].name
                             <!--IMG User-->
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text inputt"><i class="fas fa-portrait"></i></span> 
                                         </div>
-                                        <input type="file" id="imagenUsuario"
-                                        class="form-control inputt" placeholder="Imagen Perfil" required>
+                                            <form id="form1" method="POST" enctype="multipart/form-data">
+                                                <input type="file" id="imagenUsuario" accept="image/x-png, image/gif, image/jpeg"
+                                                class="form-control inputt" placeholder="Imagen Perfil" name="imagenUsuario" required>
+                                            </form>
+                                        
                                         <div id="errorImagenUsuario" class="controls">
                                 
                                         </div>
@@ -141,7 +145,7 @@
                                     </div>
                                 </div>
                                 <div class="mt-4">
-                                    <button type="button" class="btn" id="registrarUsuario">Registrarse</button>
+                                    <button type="button" class="btn" id="registrarUsuario" onclick="validarTodo()">Registrarse</button>
                                 </div>
                             </form>
                             
@@ -154,10 +158,22 @@
         </section>
     </main>
 
+    <script>
+        function validarTodo(){
+
+            console.log("Entro");
+            if(guardarInformacionUsuario() ==true ){
+                console.log("entro");
+                guardarUsuario();
+                //limpiarCamposLI();
+            }
+        }
+    </script>
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/validaciones/validarRegisterUsers.js"></script>
     <script src="js/query.js"></script>
+    <script src="js/controladores/controlador.js"></script>
 </body>
 </html>

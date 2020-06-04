@@ -16,8 +16,6 @@
                 $nombreProducto,
                 $descripcionProducto,
                 $imgProducto,
-                $colorProducto,
-                $tallaProducto,
                 $precioProducto,
                 $stockProducto,
                 $categoriaProducto
@@ -26,8 +24,6 @@
                 $this->nombreProducto=$nombreProducto;
                 $this->descripcionProducto=$descripcionProducto;
                 $this->imgProducto=$imgProducto;
-                $this->colorProducto=$colorProducto;
-                $this->tallaProducto=$tallaProducto;
                 $this->precioProducto=$precioProducto;
                 $this->stockProducto=$stockProducto;
                 $this->categoriaProducto=$categoriaProducto;
@@ -67,8 +63,6 @@
                                         "nombreProducto"=>$this->nombreProducto,
                                         "descripcionProducto"=>$this->descripcionProducto,
                                         "imgProducto"=>$this->imgProducto,
-                                        "colorProducto"=>$this->colorProducto,
-                                        "tallaProducto"=>$this->tallaProducto,
                                         "precioProducto"=>$this->precioProducto,
                                         "stockProducto"=>$this->stockProducto,
                                         "categoriaProducto"=>$this->categoriaProducto,
@@ -167,8 +161,6 @@
                                                                 "nombreProducto"=>$this->nombreProducto,
                                                                 "descripcionProducto"=>$this->descripcionProducto,
                                                                 "imgProducto"=>$this->imgProducto,
-                                                                "colorProducto"=>$this->colorProducto,
-                                                                "tallaProducto"=>$this->tallaProducto,
                                                                 "precioProducto"=>$this->precioProducto,
                                                                 "stockProducto"=>$this->stockProducto,
                                                                 "categoriaProducto"=>$this->categoriaProducto,

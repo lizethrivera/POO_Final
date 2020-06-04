@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+</head>
+<body cz-shortcut-listen="true">
+	<div style="width: 75%;"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+		<canvas id="canvas" style="display: block; width: 1000px; height: 500px;" width="1000" height="500" class="chartjs-render-monitor"></canvas>
+		<progress id="animationProgress" max="1" value="0" style="width: 100%"></progress>
+	</div>
+	<br>
+	<br>
+	<button id="randomizeData">Randomize Data</button>
+	<script>
+		var progress = document.getElementById('animationProgress');
+		var config = {
+			type: 'line',
+			data: {
+				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+				datasets: [{
+					label: 'My First dataset',
+					fill: false,
+					backgroundColor: "rgba(3, 118, 195, 0.5)",
+                    borderColor: "rgba(0, 158, 219, 1)",
+					data: [
+						1,2,3,4,5,6,7
+					]
+				}, {
+					label: 'My Second dataset ',
+					fill: false,
+					backgroundColor: "rgba(3, 118, 195, 0.5)",
+                    borderColor: "rgba(0, 158, 219, 1)",
+					data: [7,6,5,4,3,2,1
+					]
+				}]
+			},
+			options: {
+				title: {
+					display: true,
+					text: 'Chart.js Line Chart - Animation Progress Bar'
+				},
+				animation: {
+					duration: 2000,
+					onProgress: function(animation) {
+						progress.value = animation.currentStep / animation.numSteps;
+					},
+					onComplete: function() {
+						window.setTimeout(function() {
+							progress.value = 0;
+						}, 2000);
+					}
+				}
+			}
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			window.myLine = new Chart(ctx, config);
+		};
+
+	</script>
+
+
+
+</body>
+</html>

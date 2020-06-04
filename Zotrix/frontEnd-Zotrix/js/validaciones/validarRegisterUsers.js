@@ -23,7 +23,7 @@ if(localStorage.getItem("informacion") == null){
     informacionU = JSON.parse(localStorage.getItem('informacion'));
 }
 
-console.log(informacionU)
+//console.log(informacionU)
 
 
 window.onload = start;
@@ -31,7 +31,7 @@ window.onload = start;
 
 function start(){
 
-    console.log("Inicio Validaciones");
+    //console.log("Inicio Validaciones");
     document.getElementById("registrarUsuario").addEventListener('click', guardarInformacionUsuario, false);
 
 }
@@ -40,7 +40,7 @@ function guardarInformacionUsuario(){
 
     if(validar() ){
 
-        console.log("Verdadero");
+        //console.log("Verdadero");
 
         let informacion = {
 
@@ -52,18 +52,19 @@ function guardarInformacionUsuario(){
 
         };
 
-    console.log(JSON.stringify(informacion));
+    //console.log(JSON.stringify(informacion));
     informacionU.push(informacion);
     localStorage.setItem('informacionU', JSON.stringify(informacionU));
-    limpiarCamposLI();
+    //limpiarCamposLI();
+    return true;
     }
 }
 
 
 function validar(e){
 
-    if(validarNombreUsuario() && validarCorreoUsuario() && validarContraseñaUsuario() && validarConfirmacionContraseñaUsuario() && validarApellidoUsuario() && validarTerminos() ){
-        console.log("Retorno");
+    if(validarNombreUsuario() && validarCorreoUsuario() && validarContraseñaUsuario() && validarConfirmacionContraseñaUsuario() && validarApellidoUsuario() ){
+        //console.log("Retorno");
         return true;
     }
     else{
@@ -125,40 +126,40 @@ function camposVacios(){
         document.getElementById("errorNombreUsuario").innerHTML="";
         document.getElementById("errorNombreUsuario").innerHTML += `<div style=" color: #DC3545"> Ingrese su nombre </div>`;
         document.getElementById("nombreUsuario").classList.add("is-invalid");
-        console.log("Nombre: Campo vacio");
+        //console.log("Nombre: Campo vacio");
     }
 
     if(apellido.value == ""){
         document.getElementById("errorApellidoUsuario").innerHTML="";
         document.getElementById("errorApellidoUsuario").innerHTML += `<div style=" color: #DC3545"> Ingrese su apellido </div>`;
         document.getElementById("apellidoUsuario").classList.add("is-invalid");
-        console.log("Apellido: Campo vacio");
+        //console.log("Apellido: Campo vacio");
     }
 
     if(correo.value == ""){
         document.getElementById("errorCorreoUsuario").innerHTML="";
         document.getElementById("errorCorreoUsuario").innerHTML += `<div style=" color: #DC3545"> Ingrese su correo </div>`;
         document.getElementById("correoUsuario").classList.add("is-invalid");
-        console.log("Correo: Campo vacio")
+        //console.log("Correo: Campo vacio")
     }
 
 
     if(contraseña.value == ""){
-        console.log("Entro contraseña");
+        //console.log("Entro contraseña");
         document.getElementById("errorContraseñaUsuario").innerHTML="";
         document.getElementById("errorContraseñaUsuario").innerHTML += `<div style=" color: #DC3545"> Ingrese su contraseña </div>`;
         document.getElementById("contraseñaUsuario").classList.add("is-invalid");
-        console.log("Contraseña: Campo vacio");
+        //console.log("Contraseña: Campo vacio");
 
     }
 
 
     if(ccontraseña.value == ""){
-        console.log("Entro contraseña");
+        //console.log("Entro contraseña");
         document.getElementById("errorConfirmarContraseñaUsuario").innerHTML="";
         document.getElementById("errorConfirmarContraseñaUsuario").innerHTML += `<div style=" color: #DC3545"> Complete el campo </div>`;
         document.getElementById("confirmarContraseñaUsuario").classList.add("is-invalid");
-        console.log("Contraseña: Campo vacio");
+        //console.log("Contraseña: Campo vacio");
     }
 
     if(validar.checked != true || validar.checked == null){
@@ -173,14 +174,14 @@ function camposVacios(){
 function validarNombreUsuario(){
 
     var nombre = document.getElementById('nombreUsuario');
-    console.log("Nombre: "+ nombre.value);
+    //console.log("Nombre: "+ nombre.value);
 
     if(nombre.value == ""){
-        console.log("I'm free");
+       // console.log("I'm free");
         document.getElementById("errorNombreUsuario").innerHTML="";
         document.getElementById("errorNombreUsuario").innerHTML += `<div style=" color: #DC3545"> Ingrese su nombre </div>`;
         document.getElementById("nombreUsuario").classList.add("is-invalid");
-        console.log("Nombre: Campo vacio");
+       // console.log("Nombre: Campo vacio");
         return false;
     }
     document.getElementById("errorNombreUsuario").innerHTML="";
@@ -188,7 +189,7 @@ function validarNombreUsuario(){
     document.getElementById("nombreUsuario").classList.add("is-valid");
     document.getElementById("nombreUsuario").classList.remove("is-invalid");
     document.getElementById("nombreUsuario").classList.add("is-valid");
-    console.log("Nombre: "+ nombre.value)
+   // console.log("Nombre: "+ nombre.value)
     return true;
 
 
@@ -198,14 +199,14 @@ function validarNombreUsuario(){
 function validarApellidoUsuario(){
 
     var apellido = document.getElementById('apellidoUsuario');
-    console.log("Apellido: "+ apellido.value);
+    //console.log("Apellido: "+ apellido.value);
 
     if(apellido.value == ""){
-        console.log("I'm free");
+        //console.log("I'm free");
         document.getElementById("errorApellidoUsuario").innerHTML="";
         document.getElementById("errorApellidoUsuario").innerHTML += `<div style=" color: #DC3545"> Ingrese su apellido </div>`;
         document.getElementById("apellidoUsuario").classList.add("is-invalid");
-        console.log("Apellido: Campo vacio");
+        //console.log("Apellido: Campo vacio");
         return false;
     }
     document.getElementById("errorApellidoUsuario").innerHTML="";
@@ -213,14 +214,14 @@ function validarApellidoUsuario(){
     document.getElementById("apellidoUsuario").classList.add("is-valid");
     document.getElementById("apellidoUsuario").classList.remove("is-invalid");
     document.getElementById("apellidoUsuario").classList.add("is-valid");
-    console.log("Apellido: "+ apellido.value)
+    //console.log("Apellido: "+ apellido.value)
     return true;
 
 
 }
 
 function validarEmail(email){
-    console.log("Entré en la función: "+ email);
+    //console.log("Entré en la función: "+ email);
     var patron = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
     
     if (!patron.test(email)){
@@ -233,22 +234,22 @@ function validarEmail(email){
 
 function validarCorreoUsuario(){
     var correo = document.getElementById('correoUsuario');
-    console.log("Correo: "+ correo.value);
+    //console.log("Correo: "+ correo.value);
 
 
     if(correo.value == ""){
-        console.log("I'm not free");
+        //console.log("I'm not free");
         document.getElementById("errorCorreoUsuario").innerHTML="";
         document.getElementById("errorCorreoUsuario").innerHTML += `<div style=" color: #DC3545"> Ingrese su correo </div>`;
         document.getElementById("correoUsuario").classList.add("is-invalid");
-        console.log("Correo: Campo vacio");
+        //console.log("Correo: Campo vacio");
         return false;
     }else
         if(validarEmail(correo.value) == false){
             document.getElementById("errorCorreoUsuario").innerHTML="";
             document.getElementById("errorCorreoUsuario").innerHTML += `<div style=" color: #DC3545"> Por favor seguir patron: user@example.com </div>`;
             document.getElementById("correoUsuario").classList.add("is-invalid");
-            console.log("Correo: Campo vacio");
+            //console.log("Correo: Campo vacio");
         }else{
 
             document.getElementById("errorCorreoUsuario").innerHTML="";
@@ -256,7 +257,7 @@ function validarCorreoUsuario(){
             document.getElementById("correoUsuario").classList.add("is-valid");
             document.getElementById("correoUsuario").classList.remove("is-invalid");
             document.getElementById("correoUsuario").classList.add("is-valid");
-            console.log("Correo: "+ correo.value);  
+            //console.log("Correo: "+ correo.value);  
             return true;
             
         }
@@ -271,20 +272,20 @@ function validarCorreoUsuario(){
 
 function validarPaisUsuario(){
 
-    console.log("Entro a pais");
+    //console.log("Entro a pais");
     var pais = document.getElementById('paisUsuario');
-    console.log("Pais: "+pais.value);
+    //console.log("Pais: "+pais.value);
 
     if(pais.value == 0){
-        console.log("Entro a pais");
+        //console.log("Entro a pais");
         document.getElementById("errorPaisUsuario").innerHTML="";
         document.getElementById("errorPaisUsuario").innerHTML += `<div style=" color: #DC3545"> Debe elegir un pais </div>`;
-        console.log("Nombre: Campo vacio");
+        //console.log("Nombre: Campo vacio");
         return false;
     }
     document.getElementById("errorPaisUsuario").innerHTML="";
     document.getElementById("errorPaisUsuario").innerHTML += `<div style=" color: green"></div>`;
-    console.log("Pais: "+ pais.value);
+    //console.log("Pais: "+ pais.value);
     return true;
 
 
@@ -292,20 +293,20 @@ function validarPaisUsuario(){
 
 function validarEstadoUsuario(){
 
-    console.log("Entro a estado");
+    //console.log("Entro a estado");
     var estado = document.getElementById('estadoUsuario');
-    console.log("Estado: "+estado.value);
+    //console.log("Estado: "+estado.value);
 
     if(estado.value == 0){
-        console.log("Entro a estado");
+        ///console.log("Entro a estado");
         document.getElementById("errorEstadoUsuario").innerHTML="";
         document.getElementById("errorEstadoUsuario").innerHTML += `<div style=" color: #DC3545"> Debe elegir un estado </div>`;
-        console.log("Estado: Campo vacio");
+        //console.log("Estado: Campo vacio");
         return false;
     }
     document.getElementById("errorEstadoUsuario").innerHTML="";
     document.getElementById("errorEstadoUsuario").innerHTML += `<div style=" color: green"></div>`;
-    console.log("Estado: "+ estado.value);
+    //console.log("Estado: "+ estado.value);
     return true;
 }
 
@@ -313,14 +314,14 @@ function validarEstadoUsuario(){
 function validarCiudadUsuario(){
 
     var ciudad = document.getElementById('ciudadUsuario');
-    console.log("Ciudad: "+ ciudad.value);
+    //console.log("Ciudad: "+ ciudad.value);
 
     if(ciudad.value == ""){
-        console.log("Entro a ciudad");
+        //console.log("Entro a ciudad");
         document.getElementById("errorCiudadUsuario").innerHTML="";
         document.getElementById("errorCiudadUsuario").innerHTML += `<div style=" color: #DC3545"> Ingrese su ciudad </div>`;
         document.getElementById("ciudadUsuario").classList.add("is-invalid");
-        console.log("Ciudad: Campo vacio");
+        //console.log("Ciudad: Campo vacio");
         return false;
     }
     document.getElementById("errorCiudadUsuario").innerHTML="";
@@ -328,14 +329,14 @@ function validarCiudadUsuario(){
     document.getElementById("ciudadUsuario").classList.add("is-valid");
     document.getElementById("ciudadUsuario").classList.remove("is-invalid");
     document.getElementById("ciudadUsuario").classList.add("is-valid");
-    console.log("Ciudad: "+ ciudad.value)
+    //console.log("Ciudad: "+ ciudad.value)
     return true;
 
 }
 
 
 function validarNumero(numero){
-    console.log("Entré en la función: "+ numero);
+    //console.log("Entré en la función: "+ numero);
     var patron = /^([0-9])*$/ ;
 
         if(!/^([0-9])*$/.test(numero)){
@@ -350,14 +351,14 @@ function validarNumero(numero){
 function validarNumeroUsuario(){
 
     var numero = document.getElementById('numeroUsuario');
-    console.log("Numero: "+ numero.value);
+    //console.log("Numero: "+ numero.value);
 
     if(numero.value == ""){
-        console.log("I'm free");
+        //console.log("I'm free");
         document.getElementById("errorNumeroUsuario").innerHTML="";
         document.getElementById("errorNumeroUsuario").innerHTML += `<div style=" color: #DC3545"> Ingrese su numero </div>`;
         document.getElementById("numeroUsuario").classList.add("is-invalid");
-        console.log("Numero: Campo vacio");
+       // console.log("Numero: Campo vacio");
 
         return false;
     }else
@@ -365,7 +366,7 @@ function validarNumeroUsuario(){
             document.getElementById("errorNumeroUsuario").innerHTML="";
             document.getElementById("errorNumeroUsuario").innerHTML += `<div style=" color: #DC3545"> Debe ingresar sólo números </div>`;
             document.getElementById("numeroUsuario").classList.add("is-invalid");
-            console.log("Numero: Campo vacio");
+            //console.log("Numero: Campo vacio");
             return false;
         }
     else
@@ -375,7 +376,7 @@ function validarNumeroUsuario(){
             document.getElementById("numeroUsuario").classList.add("is-valid");
             document.getElementById("numeroUsuario").classList.remove("is-invalid");
             document.getElementById("numeroUsuario").classList.add("is-valid");
-            console.log("Numero: "+ document.getElementById("numeroUsuario").value);  
+            //console.log("Numero: "+ document.getElementById("numeroUsuario").value);  
             return true;
         }
 
@@ -386,14 +387,14 @@ function validarNumeroUsuario(){
 function validarZipUsuario(){
 
     var zip = document.getElementById('zipUsuario');
-    console.log("Numero: "+ zip.value);
+    //console.log("Numero: "+ zip.value);
 
     if(zip.value == ""){
-        console.log("Entro a zip");
+        //console.log("Entro a zip");
         document.getElementById("errorZipUsuario").innerHTML="";
         document.getElementById("errorZipUsuario").innerHTML += `<div style=" color: #DC3545"> Ingrese su zip </div>`;
         document.getElementById("zipUsuario").classList.add("is-invalid");
-        console.log("Numero: Campo vacio");
+       // console.log("Numero: Campo vacio");
 
         return false;
     }else
@@ -401,7 +402,7 @@ function validarZipUsuario(){
             document.getElementById("errorZipUsuario").innerHTML="";
             document.getElementById("errorZipUsuario").innerHTML += `<div style=" color: #DC3545"> Debe ingresar sólo números </div>`;
             document.getElementById("zipUsuario").classList.add("is-invalid");
-            console.log("Numero: Campo vacio");
+            //console.log("Numero: Campo vacio");
             return false;
         }
     else
@@ -411,7 +412,7 @@ function validarZipUsuario(){
             document.getElementById("zipUsuario").classList.add("is-valid");
             document.getElementById("zipUsuario").classList.remove("is-invalid");
             document.getElementById("zipUsuario").classList.add("is-valid");
-            console.log("Numero: "+ document.getElementById("zipUsuario").value);  
+           // console.log("Numero: "+ document.getElementById("zipUsuario").value);  
             return true;
         }
 
@@ -420,21 +421,21 @@ function validarZipUsuario(){
 
 function validarContraseñaUsuario(){
     var contraseña = document.getElementById('contraseñaUsuario');
-    console.log("Contraseña: "+ contraseña.value);
+    //console.log("Contraseña: "+ contraseña.value);
 
 
     if(contraseña.value == ""){
-        console.log("Entro contraseña");
+        //console.log("Entro contraseña");
         document.getElementById("errorContraseñaUsuario").innerHTML="";
         document.getElementById("errorContraseñaUsuario").innerHTML += `<div style=" color: #DC3545"> Ingrese su contraseña </div>`;
         document.getElementById("contraseñaUsuario").classList.add("is-invalid").style.border='none';
-        console.log("Contraseña: Campo vacio");
+        //console.log("Contraseña: Campo vacio");
 
         document.getElementById("errorConfirmarContraseñaUsuario").innerHTML="";
         document.getElementById("errorConfirmarContraseñaUsuario").innerHTML += `<div style=" color: #DC3545"> Las contraseñas no coinciden </div>`;
         document.getElementById("confirmarContraseñaUsuario").classList.add("is-invalid");
         confirmarContraseñaUsuario.value = "";
-        console.log("Contraseña confirmada: " + document.getElementById("confirmarContraseñaUsuario").value);
+       // console.log("Contraseña confirmada: " + document.getElementById("confirmarContraseñaUsuario").value);
 
         return false;
     }else
@@ -451,7 +452,7 @@ function validarContraseñaUsuario(){
             document.getElementById("errorConfirmarContraseñaUsuario").innerHTML="";
             document.getElementById("errorConfirmarContraseñaUsuario").innerHTML += `<div style=" color: #DC3545"> Las contraseñas no coinciden </div>`;
             document.getElementById("confirmarContraseñaUsuario").classList.add("is-invalid");
-            console.log("Contraseña confirmada: " + document.getElementById("confirmarContraseñaUsuario").value);
+            //console.log("Contraseña confirmada: " + document.getElementById("confirmarContraseñaUsuario").value);
             
             return true;
                 }
@@ -479,25 +480,25 @@ function validarConfirmacionContraseñaUsuario(){
     var contraseña = document.getElementById("contraseñaUsuario");
     var ccontraseña = document.getElementById("confirmarContraseñaUsuario");
 
-    console.log("Confirmando contraseña");
+    //console.log("Confirmando contraseña");
 
     if(contraseña.value != ccontraseña.value){
         document.getElementById("errorConfirmarContraseñaUsuario").innerHTML="";
         document.getElementById("errorConfirmarContraseñaUsuario").innerHTML += `<div style=" color: #DC3545"> Las contraseñas no coinciden </div>`;
         document.getElementById("confirmarContraseñaUsuario").classList.add("is-invalid");
-        console.log("Contraseña confirmada: " + document.getElementById("confirmarContraseñaUsuario").value);
+        //console.log("Contraseña confirmada: " + document.getElementById("confirmarContraseñaUsuario").value);
         return false;
     } else
         if(contraseña.value == null){
             
             return false;
     }else{
-        console.log("Entro");
+        //console.log("Entro");
                     document.getElementById("errorConfirmarContraseñaUsuario").innerHTML="";
                     document.getElementById("errorConfirmarContraseñaUsuario").innerHTML += `<div style=" color: green"> Contraseñas correctas </div>`;
                     document.getElementById("confirmarContraseñaUsuario").classList.remove("is-invalid");
                     document.getElementById("confirmarContraseñaUsuario").classList.add("is-valid");
-                    console.log("Contraseña: "+ document.getElementById("contraseñaUsuario").value  +"= Contraseña confirmada: "+ document.getElementById("confirmarContraseñaUsuario").value);
+                    //console.log("Contraseña: "+ document.getElementById("contraseñaUsuario").value  +"= Contraseña confirmada: "+ document.getElementById("confirmarContraseñaUsuario").value);
     return true;
 }
     }

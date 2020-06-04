@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    if(!isset($_SESSION["token"]))
+        header("Location: login.html");
+
+    if(!isset($_COOKIE["token"]))
+    header("Location: login.html");
+
+    if($_COOKIE["token"]!= $_SESSION["token"] )
+    header("Location: login.html");
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,11 +46,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="shop-user.html">Tienda</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="product.html">Productos</a>
+                    <a class="nav-link" href="shop-user.html">Productos</a>
                 </li>
 
 
@@ -46,25 +56,11 @@
 
             </ul>
             
-            <div id="input-search">
-                <form>
-                    <div class="form-group search">
-                        <input type="text" class="form-control" id="lookin-for" aria-describedby="emailHelp">
-                    </div>
-                    </form>
-            </div>
             
             <div class="form-inline my-2 my-md-0" >
                 
                 <div class="form-inline my-2 my-md-0" id="formicons">
                 <ul class="navbar-nav mr-auto flex-row ulnavs">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" ><i  id="lupa" onclick="mostrarOcultarBusqueda()" class="fas fa-search icons fa-lg"></i></a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="wishlist-user.html"><i class="fas fa-heart icons fa-lg"></i></a>
-                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="cart-user.html"><i class="fas fa-shopping-cart icons fa-lg"></i></a>
@@ -78,7 +74,7 @@
                     <li class="nav-item dropdown" id="perfil">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             
-                                <img src="img/navbarPerfil/Merida-brave-35550159-417-500.jpg" alt="" class="circulo-Perfil">
+                                <img src="img/navbarPerfil/Merida-brave-35550159-417-500.jpg"  alt="" class="circulo-Perfil">
                         </a>
                             <div class="dropdown-menu drop" id="perfil-drop" aria-labelledby="navbarDropdownMenuLink">
                                 <!--IMG Dropdown Inside-->
@@ -95,23 +91,22 @@
                                                 <h8>Hola de nuevo</h8>
                                                 <br>
                                                 <h8>Iliana Pineda</h8>
+                                                <h8 id="codigoUsuario"></h8>
                                                 </div>
                                             </div>
                                         </div>
                                         
                                         <div class="aboutUser">
-                                            <a class="dropdown-item" href="following-users.html"><i class="fas fa-star"></i> Siguiendo</a>
-                                            <a class="dropdown-item" href="orders-users.html"><i class="fas fa-box-open"></i> Pedidos</a>
-                                            <a class="dropdown-item" href="#"><i class="fas fa-percent"></i> Promociones Favoritas</a>
+                                            <a class="dropdown-item" href="user-profile.php"><i class="fas fa-star"></i> Perfil</a>
                                         
                                     </div>
 
                                         <div class="infoUser">
-                                            <a class="dropdown-item" href="#"><i class="fas fa-users-cog"></i> Configuracion</a>
+                                            <a class="dropdown-item" href="configuracionUSer.html"><i class="fas fa-users-cog"></i> Configuracion</a>
                                         </div>
 
                                         <div class="closeUser">
-                                            <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Cerrar Sesion</a>
+                                            <a class="dropdown-item" href="logout.php"><i class="fas fa-power-off"></i> Cerrar Sesion</a>
                                         </div>
                                 </div>
                             
@@ -123,7 +118,8 @@
             </div>
         </nav>
     </header>
-    <!--End Navigation-->
+
+
 
     <!--Perfil-->
     <main>
@@ -134,7 +130,7 @@
                 </div>
     
                 <div class="profile-nav-info">
-                    <h3 class="user-name">
+                    <h3 class="user-name" id="nombre">
                         Iliana Pineda
                     </h3>
     
@@ -245,5 +241,6 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 <script src="js/query.js"></script>
 <script src="js/user-profile.js"></script>
+<script src="js/controladores/controlador.js"></script>
 </body>
 </html>

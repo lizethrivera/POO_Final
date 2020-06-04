@@ -89,37 +89,54 @@ $(document).ready(function() {
     });     
 });
 
-$('#info-Bunch').hide();
+$('#cancelar').hide();
+$('#infoSucursales').hide();
 //$('#guardarSucursal').hide();
 
 function mostrarOcultarContenido(){
-    var togg= document.getElementById("nuevoSucursal").text;
 	console.log("Lo tengo");
 	//var togg= document.getElementById("buton").title;
 
-	if ( $('#nuevoSucursal').hasClass('agregar') ) { 
+	if ( $('#agregar').hasClass('nuevaSucur') ) { 
 		console.log("Entro");
-		$('#info-Bunch').show();
-		$('#nuevoSucursal').removeClass('agregar');
-        $('#nuevoSucursal').addClass('cancelar');
-        $('#guardar').append('<button type="button" class="btn agregar" id="guardarSucursal" onclick="">Guardar</button>');
-        document.getElementById("guardar").innerHTML += `
-        
-        `
-        $("#nuevoSucursal").html('Cancelar');
+		$('#infoSucursales').show();
+		$('#agregar').removeClass('nuevaSucur');
+		$('#agregar').addClass('guardar');
+		$('#cancelar').show();
+        $("#agregar").html('Cancelar');
 	}else{
-		if ( $('#nuevoSucursal').hasClass('cancelar') ) { 
+		if ( $('#agregar').hasClass('guardar') ) { 
 			console.log("asd");
-			$('#info-Bunch').hide();
+			$('#cancelar').hide();
+			$('#infoSucursales').hide();
+			cancelar();
 			//console.log(togg);
 			//togg= document.getElementById("buton").title = "Agregar Sucursal";
 			//console.log(togg);
-			$('#nuevoSucursal').removeClass('cancelar');
-            $('#nuevoSucursal').addClass('agregar');
-            $('#guardar').empty('');
-            $("#nuevoSucursal").html('Agregar');
+			$('#agregar').removeClass('guardar');
+            $('#agregar').addClass('nuevaSucur');
+            $("#agregar").html('Agregar');
 	}
 }
+}
+
+$('#divPromocion').hide();
+function promo(){
+	console.log("Si estoy");
+
+	if(document.getElementById('customSwitch2').checked == true){
+		$('#divPromocion').show();
+	}else{
+		$('#divPromocion').hide();
+	}
+}
+
+function cancelar(){
+	$('#cancelar').hide();
+	$('#infoSucursales').hide();
+	$('#agregar').removeClass('guardar');
+	$('#agregar').addClass('nuevaSucur');
+	$("#agregar").html('Editar');
 }
 
 

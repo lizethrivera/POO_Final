@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+
+    <link  rel="icon"   href="img/logoex.png" type="image/png"/>
+	<link rel="stylesheet" type="text/css" href="css/loginStyle.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	
+</head>
+<body>
+
+        <img class="wave" src="img/login/wave.png">
+        <div class="container">
+            <div class="img">
+                <img src="img/login/undraw_connection_b38q.svg">
+            </div>
+            <div class="login-content">
+                <form action="" id="formulario" class="needs-validation" novalidate name="Forms">
+                    <img src="img/login/undraw_profile_pic_ic5t.png">
+                    <h2 class="title">Bienvenido</h2>
+
+                    <div class="input-div one">
+                    <div class="i">
+                            <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                            <h5>Correo Electrónico</h5>
+                            <input type="text" class="input form-control" id="correo-login" oninput="validarCorreoLI()" required>
+                    </div>
+                    </div>
+                    <div class="controls" id="errorCorreosLI">
+                        
+                    </div>
+
+                    <div class="input-div pass">
+                    <div class="i"> 
+                            <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                            <h5>Contraseña</h5>
+                            <input type="password" class="input form-control" id="contraseña-login" oninput="validarContraseñaLI()">
+                    </div>
+                    </div>
+                    <div class="controls" id="errorContraseñasLI">
+                        
+                    </div>
+
+                    
+                    <input type="button" class="btn" id="login" onclick="logInEmpresa()" required value="Iniciar Sesión">
+
+                    <h5 class="sinCuenta">¿No tienes cuenta? Registrate</h5>
+                    <div class="userorbussi">
+                        <a href="register-Users.html" class="ancle">Usuario   </a><a href="register-bussiness.html" class="ancle">Empresa</a>
+                    </div>
+                    <div class="alert alert-danger" id="error" style="display: none;"></div>
+                </form>
+            </div>
+    </div>
+
+
+    <script>
+        function todo(){
+            if(guardarInformacionLI() ){
+                logInEmpresa();
+                limpiarCamposLI();
+            }
+        }
+    </script>
+
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/validaciones/validarLogIn.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/controladores/controlador-login-Empresa.js"></script>
+</body>
+</html>

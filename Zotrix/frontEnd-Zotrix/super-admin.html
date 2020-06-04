@@ -6,6 +6,7 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Super Admin Dashboard</title>
 		<link  rel="icon"   href="img/logoex.png" type="image/png" />
+		
 		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700, 600,500,400,300' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/animate.css">
@@ -203,8 +204,121 @@
                             <li><strong>24h</strong> Soporte</li>
                         </ul>
                         <a href="#" id="planPlatino" onclick="planPlatino()">Editar</a>
-                    </div>
-                </div>
+					</div>
+					
+					
+				</div>
+				
+				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+					<h1 class="h2" style="margin: 10PX;">TIPO DE PLAN</h1>
+					<div class="btn-toolbar mb-2 mb-md-0">
+					  <div class="btn-group mr-2">
+						<button type="button" class="btn btn-sm btn-outline-secondary nuevaSucur" onclick="mostrarOcultarContenido()" id="agregar">Agregar</button>
+						<button type="button" class="btn btn-sm btn-outline-secondary" id="cancelar" onclick="cancelar()">Cancelar</button>
+					  </div>
+					</div>
+				  </div>
+			
+				<div class="hero" style="height: 150px; width: 100%; justify-content: center;" id="infoSucursales">
+					<form class="needs-validation" style="justify-content: center; margin: 30px; margin-top: 50px;">
+						<div class="row">
+							<!--Nombre de Empresa-->
+							<div class="col-4 col-md-12 col-lg-12">
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+										</div>
+										<input type="text" class="form-control" id="nombreEmpresa" placeholder="Nombre Plan" required>
+										
+									</div>
+									<div id="errorNombreEmpresa" class="controls">
+						
+									</div>
+								</div>
+							</div>
+			
+							<div class="col-12 col-md-12 col-lg-6">
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fas fa-map-marked-alt"></i></span>
+										</div>
+										<input type="text" class="form-control rounded-right" placeholder="Almacenamiento" id="Almacenamiento" required>
+									</div>
+								</div>
+							</div>
+			
+							<div class="col-12 col-md-12 col-lg-6">
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fas fa-map-marked-alt"></i></span>
+										</div>
+										<input type="text" class="form-control rounded-right" placeholder="Productos" id="Productos" required>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+			
+					</form>
+			
+					<div id="map" style="margin-top: 180px; height: 300px;"></div>
+													<script>
+														var map = L.map('map').setView([14.0818005, -87.20681], 8);
+														L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=iDBLo5VjrG6S52W3HIHF',{
+															
+															attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
+															
+														}).addTo(map);
+													
+														var marker = L.marker([14.0818005, -87.20681]).addTo(map);
+														</script>
+				</div>
+
+
+				<div style="margin-top: 40px; margin-bottom: 40px;">
+					<div class="container">
+						<div class="row">
+								<div class="col-lg-12">
+									<div class="table-responsive">        
+										<table id="example" class="table table-hover" style="width:100%">
+										<thead>
+											<tr>
+												<th>Nombre</th>
+												<th>Imagen</th>
+												<th>Descripcion</th>
+												<th>Acciones</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Tiger Nixon</td>
+												<td>Arquitecto</td>
+												<td><span class="badge badge-success m-0">Principal</span></td>
+												<td><a href="#"> <i class="fas fa-edit"></i></a> <a href="#"> <i class="fas fa-trash-alt"></i></a></td>
+				
+											</tr>
+											<tr>
+												<td>Garrett Winters</td>
+												<td>Contador</td>
+												<td><span class="badge badge-danger m-0">Secundaria</span></td>
+												<td><a href="#"> <i class="fas fa-edit"></i></a> <a href="#"> <i class="fas fa-trash-alt"></i></a></td>
+											</tr>                
+											<tr>
+												<td>Cedric Kelly</td>
+												<td>Senior Javascript Developer</td>
+												<td>Edinburgh</td>
+												<td><a href="#"> <i class="fas fa-edit"></i></a> <a href="#"> <i class="fas fa-trash-alt"></i></a></td>
+											</tr>
+										</tbody>        
+										</table>                  
+									</div>
+								</div>
+						</div>  
+					</div>
+				</div>
 			</div>
 
 			<div class="profile-setting tab">
@@ -213,10 +327,7 @@
 				</div>
 
 				<div class="main">
-					<div class="widget">
-						<div class="title">Vistas</div>
-						<div class="chart"></div>
-					</div>
+
 					<div class="widget">
 						<div class="title">Registros</div>
 						<div class="chart"></div>
@@ -225,15 +336,7 @@
 						<div class="title">Ventas</div>
 						<div class="chart"></div>
 					</div>
-					<div class="widget">
-						<div class="title">Promociones</div>
-						<div class="chart"></div>
-					</div>
 
-					<div class="widget">
-						<div class="title">Categoria mas demandada</div>
-						<div class="chart"></div>
-					</div>
 				</div>
 				
 			</div>
@@ -268,9 +371,116 @@
 
 					
 				</div>
+				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+					<h1 class="h2" style="margin: 10PX;">CATEGORIAS</h1>
+					<div class="btn-toolbar mb-2 mb-md-0">
+					  <div class="btn-group mr-2">
+						<button type="button" class="btn btn-sm btn-outline-secondary nuevaSucur" onclick="mostrarOcultarContenido()" id="agregar">Agregar</button>
+						<button type="button" class="btn btn-sm btn-outline-secondary" id="cancelar" onclick="cancelar()">Cancelar</button>
+					  </div>
+					</div>
+				  </div>
+			
+				<div class="hero" style="height: 500px; width: 100%; justify-content: center;" id="infoSucursales">
+					<form class="needs-validation" style="justify-content: center; margin: 30px; margin-top: 50px;">
+						<div class="row">
+							<!--Nombre de Empresa-->
+							<div class="col-4 col-md-12 col-lg-12">
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+										</div>
+										<input type="text" class="form-control" id="nombreCategoria" placeholder="Nombre Categoria" required>
+										
+									</div>
+									<div id="errorCategoria" class="controls">
+						
+									</div>
+								</div>
+							</div>
+			
+							<div class="col-12 col-md-12 col-lg-6">
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fas fa-map-marked-alt"></i></span>
+										</div>
+										<input type="file" class="form-control rounded-right" placeholder="Imagen de Categoria" id="imgCategoria" required>
+									</div>
+								</div>
+							</div>
+			
+							<div class="col-12 col-md-12 col-lg-6">
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fas fa-map-marked-alt"></i></span>
+										</div>
+										<input type="text" class="form-control rounded-right" placeholder="Descripcion" id="descripCategoria" required>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+			
+					</form>
+			
+					<div id="map" style="margin-top: 180px; height: 300px;"></div>
+													<script>
+														var map = L.map('map').setView([14.0818005, -87.20681], 8);
+														L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=iDBLo5VjrG6S52W3HIHF',{
+															
+															attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
+															
+														}).addTo(map);
+													
+														var marker = L.marker([14.0818005, -87.20681]).addTo(map);
+														</script>
+				</div>
 
 
-					
+				<div style="margin-top: 40px; margin-bottom: 40px;">
+					<div class="container">
+						<div class="row">
+								<div class="col-lg-12">
+									<div class="table-responsive">        
+										<table id="example" class="table table-hover" style="width:100%">
+										<thead>
+											<tr>
+												<th>Nombre</th>
+												<th>Imagen</th>
+												<th>Descripcion</th>
+												<th>Acciones</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Tiger Nixon</td>
+												<td>Arquitecto</td>
+												<td><span class="badge badge-success m-0">Principal</span></td>
+												<td><a href="#"> <i class="fas fa-edit"></i></a> <a href="#"> <i class="fas fa-trash-alt"></i></a></td>
+				
+											</tr>
+											<tr>
+												<td>Garrett Winters</td>
+												<td>Contador</td>
+												<td><span class="badge badge-danger m-0">Secundaria</span></td>
+												<td><a href="#"> <i class="fas fa-edit"></i></a> <a href="#"> <i class="fas fa-trash-alt"></i></a></td>
+											</tr>                
+											<tr>
+												<td>Cedric Kelly</td>
+												<td>Senior Javascript Developer</td>
+												<td>Edinburgh</td>
+												<td><a href="#"> <i class="fas fa-edit"></i></a> <a href="#"> <i class="fas fa-trash-alt"></i></a></td>
+											</tr>
+										</tbody>        
+										</table>                  
+									</div>
+								</div>
+						</div>  
+					</div>
+				</div>
 				</div>
 			</div>
 		</div>

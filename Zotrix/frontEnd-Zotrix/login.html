@@ -50,18 +50,31 @@
                     </div>
 
                     
-                    <input type="button" class="btn" id="login" oninput="validarContraseñaLI()" required value="Iniciar Sesión">
+                    <input type="button" class="btn" id="login" onclick="logIn()" required value="Iniciar Sesión">
 
                     <h5 class="sinCuenta">¿No tienes cuenta? Registrate</h5>
                     <div class="userorbussi">
-                        <a href="registerUsers.html" class="ancle">Usuario   </a><a href="register-bussiness.html" class="ancle">Empresa</a>
+                        <a href="register-Users.html" class="ancle">Usuario   </a><a href="register-bussiness.html" class="ancle">Empresa</a>
                     </div>
+                    <div class="alert alert-danger" id="error" style="display: none;"></div>
                 </form>
             </div>
     </div>
 
 
+    <script>
+        function todo(){
+            if(guardarInformacionLI() ){
+                logIn();
+                limpiarCamposLI();
+            }
+        }
+    </script>
+
+    <script src="js/jquery-3.5.0.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script src="js/validaciones/validarLogIn.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/controladores/controlador-login.js"></script>
 </body>
 </html>

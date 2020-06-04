@@ -85,14 +85,12 @@
                     if(array_key_exists("promocionProducto", $productos[$j])){
                         if(empty($productos[$j]["promocionProducto"])){
                             //echo ("No hay productos en promocion!");
-                        break;
-
                         }else{
                             
                             $promocion = $productos[$j]["promocionProducto"];
                             for($k=0; $k<sizeof($promocion); $k++){
                                 if(in_array($promocion[$k]["promocionCode"], $promoFavorita)){
-                                    //echo("Hola, si estoy");
+                                    echo("Hola, si estoy");
                                     $misPromos = $productos[$j];
                                     echo json_encode($misPromos);
                                 }
@@ -111,7 +109,7 @@
         }
         
 
-        //echo json_encode($promoFavorita);
+        //echo json_encode($promocion);
 
     }
 

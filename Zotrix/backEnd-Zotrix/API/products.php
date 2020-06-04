@@ -13,8 +13,6 @@
                 $_POST['nombreProducto'],
                 $_POST['descripcionProducto'],
                 $_POST['imgProducto'],
-                $_POST['colorProducto'],
-                $_POST['tallaProducto'],
                 $_POST['precioProducto'],
                 $_POST['stockProducto'],
                 $_POST['categoriaProducto']
@@ -43,8 +41,6 @@
                 $_PUT['nombreProducto'],
                 $_PUT['descripcionProducto'],
                 $_PUT['imgProducto'],
-                $_PUT['colorProducto'],
-                $_PUT['tallaProducto'],
                 $_PUT['precioProducto'],
                 $_PUT['stockProducto'],
                 $_PUT['categoriaProducto']

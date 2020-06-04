@@ -629,3 +629,81 @@ a{
 .ay:hover{
 	color: orange;
 }
+
+#map{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.hero{
+	width: 80%;
+	height: 450px;
+	position: relative;
+	margin: 50px auto;
+	overflow: hidden;
+}
+
+.btn-box{
+	display: flex;
+	border-bottom: 1px solid #ccc;
+}
+
+.btn-box button{
+	background: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	margin-right: 20px;
+	font-weight: bold;
+}
+
+.btn-box i{
+	margin-right: 20px!important;
+}
+
+.btn-box button:hover .fas,
+.btn-box button:hover .far{
+	color: #f16f21;
+}
+
+.colores button:hover{
+	color: #f16f21;
+}
+
+.content-right img{
+	width: 350px;
+}
+
+.content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5% auto;
+	position: absolute;
+	transform: translateX(100%);
+	transition: 0.3s;
+
+}
+
+
+
+.content-left{
+	flex-basis: 50%;
+}
+
+.content-right{
+	flex-basis: 50%;
+	text-align: center;
+}
+
+#content1{
+	transform: translateX(0%);
+}
+
+#btn1{
+	color: #f16f21;
+}

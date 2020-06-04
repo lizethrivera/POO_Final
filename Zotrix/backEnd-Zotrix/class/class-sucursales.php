@@ -68,24 +68,20 @@
         }
 
         //Obtengo sucursales de dicha empresa.
-        public static function obtenerSucursales(){
+        public static function obtenerSucursales($codigoEmpresa){
                 $contenidoArchivoEmpresas = file_get_contents('../data/empresas.json');
                 $empresas = json_decode($contenidoArchivoEmpresas, true);
                 $producto = array();
 
                 for($i=0; $i<sizeof($empresas); $i++){
-                        //echo("Entro");
-                        if(array_key_exists("sucursales", $empresas[$i])){
-                                //echo("Si hay");
-                                $sucursal = $empresas[$i]["sucursales"];
-                                for($j=0; $j<sizeof($sucursal); $j++){
-                                        $sucursales[] = $sucursal[$j]; 
-                                }
-                        }
+                        if($empresas[$i]["empresaCode"] == $codigoEmpresa){
+                                $empresa = $empresas[$i]["sucursales"];
+                        } 
+                                
                         
                 }        
 
-                echo json_encode($sucursales);
+                echo json_encode($empresa);
         }
 
 

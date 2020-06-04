@@ -15,7 +15,6 @@
 </head>
 <body>
 
-    <!--Navigation-->
     <header>
         <nav class="navbar navbar-expand-md navbar-dark margins">
             <a class="navbar-brand logo" href="#">
@@ -33,39 +32,21 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tienda</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Productos</a>
+                    <a class="nav-link" href="shop-user.html">Productos</a>
                 </li>
 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Empresas</a>
+                    <a class="nav-link" href="bussiness-view.html">Empresas</a>
                 </li>
 
             </ul>
             
-            <div id="input-search">
-                <form>
-                    <div class="form-group search">
-                        <input type="text" class="form-control" id="lookin-for" aria-describedby="emailHelp">
-                    </div>
-                    </form>
-            </div>
             
             <div class="form-inline my-2 my-md-0" >
                 
                 <div class="form-inline my-2 my-md-0" id="formicons">
                 <ul class="navbar-nav mr-auto flex-row ulnavs">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" ><i  id="lupa" onclick="mostrarOcultarBusqueda()" class="fas fa-search icons fa-lg"></i></a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="wishlist-user.html"><i class="fas fa-heart icons fa-lg"></i></a>
-                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="cart-user.html"><i class="fas fa-shopping-cart icons fa-lg"></i></a>
@@ -79,7 +60,7 @@
                     <li class="nav-item dropdown" id="perfil">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             
-                                <img src="img/navbarPerfil/Merida-brave-35550159-417-500.jpg" alt="" class="circulo-Perfil">
+                                <img src="img/navbarPerfil/Merida-brave-35550159-417-500.jpg"  alt="" class="circulo-Perfil">
                         </a>
                             <div class="dropdown-menu drop" id="perfil-drop" aria-labelledby="navbarDropdownMenuLink">
                                 <!--IMG Dropdown Inside-->
@@ -96,23 +77,22 @@
                                                 <h8>Hola de nuevo</h8>
                                                 <br>
                                                 <h8>Iliana Pineda</h8>
+                                                <h8 id="codigoUsuario"></h8>
                                                 </div>
                                             </div>
                                         </div>
                                         
                                         <div class="aboutUser">
-                                            <a class="dropdown-item" href="following-users.html"><i class="fas fa-star"></i> Siguiendo</a>
-                                            <a class="dropdown-item" href="orders-users.html"><i class="fas fa-box-open"></i> Pedidos</a>
-                                            <a class="dropdown-item" href="promociones-users.html"><i class="fas fa-percent"></i> Promociones Favoritas</a>
+                                            <a class="dropdown-item" href="user-profile.php"><i class="fas fa-star"></i> Perfil</a>
                                         
                                     </div>
 
                                         <div class="infoUser">
-                                            <a class="dropdown-item" href="#"><i class="fas fa-users-cog"></i> Configuracion</a>
+                                            <a class="dropdown-item" href="configuracionUSer.html"><i class="fas fa-users-cog"></i> Configuracion</a>
                                         </div>
 
                                         <div class="closeUser">
-                                            <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Cerrar Sesion</a>
+                                            <a class="dropdown-item" href="logout.php"><i class="fas fa-power-off"></i> Cerrar Sesion</a>
                                         </div>
                                 </div>
                             
@@ -124,7 +104,6 @@
             </div>
         </nav>
     </header>
-    <!--End Navigation-->
 
     <section class="all-about-product mb-5">
         <div class="input-Sucur">

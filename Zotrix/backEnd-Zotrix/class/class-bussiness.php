@@ -95,6 +95,7 @@
                 fclose($archivoEmpresa);
 
                 echo '{"codigoResultado": 1,"mensaje": "Empresa guardada con exito"}';
+                return true;
         }
 
 
@@ -186,6 +187,19 @@
 
                 
         
+                public static function verificarEmpresa($correoEmpresa, $passwordEmpresa){
+                        $contenidoArchivoEmpresas = file_get_contents("../data/empresas.json");
+                        $empresas = json_decode($contenidoArchivoEmpresas, true);
+
+                        for($i=0; $i<sizeof($empresas); $i++){
+                                if($empresas[$i]["correoEmpresa"] == $correoEmpresa && $empresas[$i]["passwordEmpresa"] == $passwordEmpresa){
+                                        return $empresas[$i];
+                                break;
+                                }
+                        }
+                        return null;
+                }
+
 
         public static function eliminarEmpresa($empresaCode){
                 $contenidoArchivoEmpresas = file_get_contents("../data/empresas.json");
