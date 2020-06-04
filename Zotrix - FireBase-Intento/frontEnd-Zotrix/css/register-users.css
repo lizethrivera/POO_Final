@@ -1,0 +1,116 @@
+
+h2{
+	margin: 15px 0;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 2rem;
+}
+
+input{
+    border: none!important;
+    border-bottom: 2px solid #d9d9d9!important;
+}
+
+i{
+    background: none;
+}
+
+span{
+    background: none!important;
+    border: none!important;
+    border-bottom: 2px solid #d9d9d9!important;
+}
+
+input:focus, input.form-control:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.inputt{
+    border: none!important;
+}
+
+
+.btn{
+	display: block;
+	width: 100%;
+	height: 50px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right, #F16F21, rgba(241, 113, 33, 0.952), rgba(241, 113, 33, 0.918));
+	background-size: 200%;
+	font-size: 1.2rem;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: .5s;
+}
+
+.foco:focus{
+    color: #F16F21!important;
+}
+
+
+input:focus, input.form-control:focus {
+    transition: .10s;
+    border-color: rgb(255, 144, 0);
+    outline: none!important;
+    outline-width: 0 !important;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.other{
+    color: #F16F21!important;
+}
+
+.btn{
+	display: block;
+	width: 100%;
+	height: 50px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right, #F16F21, rgba(241, 113, 33, 0.952), rgba(241, 113, 33, 0.918));
+	background-size: 200%;
+	font-size: 1.2rem;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: .5s;
+}
+
+.btn:hover{
+    background-position: right;
+    color: #fff;
+}
+
+.controls{
+    font-size: 11px; 
+    margin-top: 0!important;
+    text-align: right;
+}
+
+.error-fixed{
+	border: none!important;
+}
+
+textarea:focus, input:focus, input[type]:focus {
+    outline: 0 none!important;
+}
+
+.is-invalid:focus{
+	outline: none!important;
+}
+
+ash{
+	color: red;
+}

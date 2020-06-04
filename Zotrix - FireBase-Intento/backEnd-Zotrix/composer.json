@@ -1,0 +1,13 @@
+{
+    "name": "vegzz/proyecto",
+    "description": "Pagina de comercio WEB Zotrix",
+    "authors": [
+        {
+            "name": "lizethrivera",
+            "email": "vegzzrivera99@gmail.com"
+        }
+    ],
+    "require": {
+        "kreait/firebase-php": "^5.3"
+    }
+}

@@ -1,4 +1,5 @@
 var codigoUsuario = readCookie('userCode');
+var total=0;
 function readCookie(name) {
 
     var nameEQ = name + "="; 
@@ -41,7 +42,7 @@ function obtenerPedidos(){
 obtenerPedidos();
 
 function mostrarPedidos(pedidos){
-    var total=0;
+    
     document.getElementById('pedidos').innerHTML = '';
     for(let i=0; i<pedidos.length; i++){
         document.getElementById('pedidos').innerHTML+=`
@@ -57,7 +58,7 @@ function mostrarPedidos(pedidos){
                     <div class="pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left" style="max-width: 9rem;">
                         <div class="form-group mb-0">
                         <label class="font-weight-medium" for="quantity1">Cantidad</label>
-                        <input class="form-control" type="number" id="quantity1" value="1" disabled="true">${pedidos[i].cantidad}
+                        <input class="form-control" type="number" id="quantity1" value="${pedidos[i].cantidad}" disabled="true">
                         </div>
                         <button class="btn btn-link px-0 text-danger" onclick="eliminarPedido('${codigoUsuario}','${pedidos[i].orderCode}')" type="button"><i class="czi-close-circle mr-2"></i><span class="font-size-sm">Eliminar</span></button>
                     </div>
@@ -75,6 +76,7 @@ function mostrarPedidos(pedidos){
     `
     document.getElementById('infoSubtotal').innerHTML='';
     document.getElementById('infoSubtotal').innerHTML+=`
+    <label for="validationTextarea">SUBTOTAL</label>
     <div class="input-group input-group-sm">
         <div class="input-group-prepend">
             <span class="input-group-text">USD</span>
@@ -85,21 +87,23 @@ function mostrarPedidos(pedidos){
     `
     document.getElementById('impuesto').innerHTML='';
     document.getElementById('impuesto').innerHTML+=`
+    <label for="validationTextarea" >IMPUESTO</label>
     <div class="input-group input-group-sm">
         <div class="input-group-prepend">
             <span class="input-group-text">USD</span>
         </div>
-        <input type="text" class="form-control rounded-right" placeholder="${(total*0.15)}" id="impuestoProducto" required>
+        <input type="text" class="form-control rounded-right"  disabled="true" placeholder="${(total*0.15)}" id="impuestoProducto" required>
     </div>
 
     `
     document.getElementById('total').innerHTML='';
     document.getElementById('total').innerHTML+=`
+    <label for="validationTextarea" >TOTAL</label>
     <div class="input-group input-group-sm">
         <div class="input-group-prepend">
             <span class="input-group-text">USD</span>
         </div>
-        <input type="text" class="form-control rounded-right" placeholder="${(total*0.15)+total}" id="totalProducto" required>
+        <input type="text" class="form-control rounded-right"  disabled="true" placeholder="${(total*0.15)+total}" id="totalProducto" required>
     </div>
     
     

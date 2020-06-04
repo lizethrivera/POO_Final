@@ -1,0 +1,256 @@
+f<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Sucursales</title>
+
+    <link  rel="icon"   href="img/logoex.png" type="image/png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+
+    
+</head>
+<body>
+
+    <!--Navigation-->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark margins">
+            <a class="navbar-brand logo" href="#">
+                <img src="img/Logo.png" class="logo">
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <!--List Menu-->
+            <div class="navbar-collapse collapse" id="navbarsExample04">
+            <ul class="navbar-nav mr-auto ulnavs">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tienda</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Productos</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Empresas</a>
+                </li>
+
+            </ul>
+            <div id="input-search">
+                <form>
+                    <div class="form-group search">
+                        <input type="text" class="form-control" id="lookin-for" aria-describedby="emailHelp">
+                    </div>
+                    </form>
+            </div>
+            
+            <div class="form-inline my-2 my-md-0" >
+                
+                <div class="form-inline my-2 my-md-0" id="formicons">
+                <ul class="navbar-nav mr-auto flex-row ulnavs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" ><i  id="lupa" onclick="mostrarOcultarBusqueda()" class="fas fa-search icons fa-lg"></i></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-bell icons fa-lg"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--IMG Dropdown-->
+            <div class="otro" >
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown" id="perfil">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            
+                                <img src="img/navbarPerfil/c6940bbd1ef6607f347078e2a471213e.jpg" alt="" class="circulo-Perfil">
+                        </a>
+                        <div class="dropdown-menu drop" id="perfil-drop" aria-labelledby="navbarDropdownMenuLink">
+                            <!--IMG Dropdown Inside-->
+                            <div class="drop-perfil">
+                                <div class="img-nameuser">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a href="config-pbussiness.html">
+                                                <img src="img/navbarPerfil/c6940bbd1ef6607f347078e2a471213e.jpg" alt="" class="circulo-Perfil-In">
+                                            </a>
+                                        </div>
+                    
+                                        <div class="col-8 left">
+                                            <h8>Riveras Company</h8>
+                                            <br>
+                                            <h8>Platino</h8>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="aboutUser">
+                                        <a class="dropdown-item" href="bunch-office.html"><i class="far fa-building"></i> Sucursales</a>
+                                        <a class="dropdown-item" href="product-bussiness.html"><i class="fas fa-cubes"></i> Productos</a>
+                                        <a class="dropdown-item" href="promociones-bussiness.html"><i class="fas fa-percent"></i> Promociones</a>
+                                    
+                                </div>
+                    
+                                    <div class="infoUser">
+                                        <a class="dropdown-item" href="config-pbussiness.html"><i class="fas fa-users-cog"></i> Configuracion</a>
+                                    </div>
+                    
+                                    <div class="closeUser">
+                                        <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Cerrar Sesion</a>
+                                    </div>
+                            </div>
+                        
+                        </div>
+                    </li>
+    
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </header>
+    <!--End Navigation-->
+
+    <section class="all-about-sucur">
+        <div class="input-Sucur">
+            <form>
+                <div class="mb-3 mt-3 text-center">
+                    <h2>MIS SUCURSALES</h2>
+                </div>
+                
+                <div class="mb-4 botones">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="" id="guardar">
+                                
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="">
+                                <button type="button" class="btn agregar" id="nuevoSucursal" onclick="mostrarOcultarContenido()">Agregar</button>
+                            </div>
+                        </div>
+                        </div>
+
+                    
+                </div>
+
+                <div id="info-Bunch">
+                    <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-address-book"></i></span>
+                            </div>
+                            <input type="text" class="form-control rounded-right" placeholder="Nombre" id="nombreSucursal" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-building"></i></span>
+                            </div>
+                            <select class="form-control" id="tipoSucursal" placeholder="Tipo de Sucursal" required>
+                                <option selected disabled value="">Tipo de Sucursal</option>
+                                <option>Principal</option>
+                                <option>Secundaria</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-map-marked-alt"></i></span>
+                            </div>
+                            <input type="text" class="form-control rounded-right" placeholder="Coordenadas" id="coordenadasSucursal" required>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1" class=" mapa"><i class="fas fa-address-book"></i> Vista en el mapa</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+        
+    </section>
+
+    <div>
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-responsive">        
+                            <table id="example" class="table table-hover" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Coordenadas</th>
+                                    <th>Tipo</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>Arquitecto</td>
+                                    <td><span class="badge badge-success m-0">Principal</span></td>
+                                    <td><a href="#"> <i class="fas fa-edit"></i></a> <a href="#"> <i class="fas fa-trash-alt"></i></a></td>
+    
+                                </tr>
+                                <tr>
+                                    <td>Garrett Winters</td>
+                                    <td>Contador</td>
+                                    <td><span class="badge badge-danger m-0">Secundaria</span></td>
+                                    <td><a href="#"> <i class="fas fa-edit"></i></a> <a href="#"> <i class="fas fa-trash-alt"></i></a></td>
+                                </tr>                
+                                <tr>
+                                    <td>Cedric Kelly</td>
+                                    <td>Senior Javascript Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td><a href="#"> <i class="fas fa-edit"></i></a> <a href="#"> <i class="fas fa-trash-alt"></i></a></td>
+                                </tr>
+                            </tbody>        
+                            </table>                  
+                        </div>
+                    </div>
+            </div>  
+        </div>
+    </div>
+
+
+    
+    
+    
+
+    
+    
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
+<link rel="stylesheet"  type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<link rel="stylesheet" href="css/bunch-office.css">
+<script src="js/query.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+
+</body>
+</html>

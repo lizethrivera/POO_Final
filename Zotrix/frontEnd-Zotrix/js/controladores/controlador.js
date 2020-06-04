@@ -52,7 +52,7 @@ function guardarUsuario() {
 
         success: function(respuesta) {
             console.log(respuesta);
-
+            window.location = "login.html";
 
         }, //Función que tiene como parametro una respuesta que puede ser JSON.
         error: function(error) {
