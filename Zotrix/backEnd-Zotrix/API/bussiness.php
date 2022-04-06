@@ -6,7 +6,7 @@
     $_PUT = json_decode(file_get_contents('php://input'), true);
 
     switch($_SERVER['REQUEST_METHOD']){
-        //Metodo de Guardar
+        //Metodo de Guardar en la API
         case 'POST':  
             //Guardamos
             $empresa = new Bussiness(
